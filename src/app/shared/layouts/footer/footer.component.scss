@@ -1,0 +1,38 @@
+.footer {
+  background-color: #064635;
+  padding: 60px;
+
+  img {
+    width: 250px;
+
+    @media (width < 768px) {
+      object-fit: cover;
+    }
+
+    @media (width <= 768px) {
+      width: 250px;
+    }
+
+    @media (width <= 425px) {
+      width: 150px;
+    }
+  }
+
+  p {
+    color: white;
+    font-size: 20px;
+    padding-bottom: 20px;
+
+    a {
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  .navLinks {
+    .footer-svg {
+      padding-right: 60px;
+    }
+  }
+}
