@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container">
+  <div class="container-fluid">
     <a class="navbar-brand" href="/">
       <img src="assets\logo\horizontal_logo.svg" alt="specialist care logo" />
     </a>
@@ -38,8 +38,58 @@
               >About</a
             >
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/about">Services</a>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              routerLink="/"
+              >Services</a
+            >
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#">24/7 Supervised Care</a>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="#">Mental Health Support</a>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Substance Abuse Recovery Support</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="#">Daily Living Assistance</a>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Structured Activities & Therapy</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="#">Community Integration</a>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="#">Personalised Care Plans</a>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Emotional & Behavioral Support</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Education & Skill Development</a
+                >
+              </li>
+            </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/services"
@@ -51,6 +101,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/contact">Resident Stories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact">Contact Us</a>
           </li>
         </ul>
       </div>

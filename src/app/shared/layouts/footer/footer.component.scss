@@ -1,9 +1,18 @@
 .footer {
   background-color: #064635;
-  padding: 60px;
+  padding-top: 30px;
+
+  &.green-fade {
+    background: linear-gradient(
+      135deg,
+      rgba(144, 238, 144, 0.8) 0%,
+      rgba(102, 205, 170, 0.6) 50%,
+      rgba(60, 179, 113, 0.4) 100%
+    );
+  }
 
   img {
-    width: 250px;
+    width: 200px;
 
     @media (width < 768px) {
       object-fit: cover;
@@ -33,6 +42,12 @@
   .navLinks {
     .footer-svg {
       padding-right: 60px;
+    }
+  }
+
+  .navigation-links {
+    a {
+      text-decoration: underline;
     }
   }
 }

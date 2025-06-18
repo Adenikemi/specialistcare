@@ -9,25 +9,269 @@
 <!-- Your content here -->
 <!-- </div>
 </div> -->
-<div class="hero-section-container">
-  <div class="container h-100">
-    <div class="row h-100">
-      <div class="col-lg-5 my-auto ms-3">
-        <h1>Empowering Wellness and Enriching Lives</h1>
+<main class="home-page">
+  <div class="hero-section-container">
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="mb-5 text-center align-content-end">
+          <!-- <p class="m-0 text-light" style="font-size: 24px">
+            "Empowering Wellness and Enriching Lives"
+          </p> -->
+          <h1 class="text-light">Empowering Wellness and Enriching Lives</h1>
+          <p class="text-light" style="font-size: 20px">
+            We believe in empowerment, dignity, and holistic care, ensuring that
+            every individual receives the support they need to rebuild their
+            lives.
+          </p>
+          <button>Learn More</button>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="hero-section">
+      <div class="row d-flex">
+        <div class="hero-text">
+          <h1 class="p-0 m-0 text-center">    
+            Building Strong Foundations and Nurturing Bright Futures
+          </h1>
+          <p class="p-design pt-0 text-center">
+            Helping youths grow with love, learning, and laughter.
+          </p> -->
+    <!-- <butcton (click)="goToAbout(s)">Learn More</butcton> -->
+    <!-- </div>
+      </div>
+    </div> -->
+  </div>
+
+  <div class="home-from-home-section mt-5 bg-light pt-5">
+    <div class="row m-0">
+      <div class="col-md-6 p-0">
+        <div class="left-section">
+          <img
+            src="assets\images\full_bg.png"
+            alt="children playing in the field"
+          />
+        </div>
+      </div>
+      <div class="col-md-6 d-flex align-items-center">
+        <div class="right-section d-flex flex-column">
+          <h1 class="text-center pb-3 pb-md-4 m-0 pt-3 pt-md-0">
+            Welcome to Speciality Care
+          </h1>
+          <p class="mb-2 mb-md-0">
+            At Specialist Care Ltd, we are committed to providing safe,
+            supportive, and nurturing environments for those in need. We believe
+            in empowerment, dignity, and holistic care, ensuring that every
+            individual receives the support they need to rebuild their lives.
+            Our compassionate team works tirelessly to create a secure, healing
+            space where residents can regain stability, independence, and hope
+            for the future.
+          </p>
+        </div>
       </div>
     </div>
   </div>
-  <!-- <div class="hero-section">
-    <div class="row d-flex">
-      <div class="hero-text">
-        <h1 class="p-0 m-0 text-center">    
-          Building Strong Foundations and Nurturing Bright Futures
-        </h1>
-        <p class="p-design pt-0 text-center">
-          Helping youths grow with love, learning, and laughter.
-        </p> -->
-  <!-- <button (click)="goToAbout(s)">Learn More</button> -->
-  <!-- </div>
+
+  <div class="strategy-section p-5">
+    <h2 class="text-center text-light">Our Strategic Direction</h2>
+    <p class="mb-4 text-light text-center" style="font-size: 16px">
+      Specialist care's strategic direction focuses on delivering personalized,
+      high-quality support tailored to the unique needs of individuals with
+      complex health or social care requirements.
+    </p>
+    <div class="container">
+      <div class="row">
+        <div class="care-container">
+          <div class="row d-flex">
+            <div class="col-md-6">
+              <div class="image-box">
+                <img src="assets/images/mission.jpg" alt="Mission Statement" />
+                <div class="text-box">Mission Statement</div>
+              </div>
+            </div>
+            <div class="col-md-6 align-content-center">
+              <div class="content">
+                <p class="text-white" style="font-size: 16px">
+                  Our mission is to help people improve their wellbeing and
+                  reach their potential through the provision of high quality,
+                  compassionate and responsive residential care.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row d-flex">
+            <div class="col-md-6">
+              <div class="image-box">
+                <img src="assets/images/vision.jpg" alt="Vision Statement" />
+                <div class="text-box">Vision Statement</div>
+              </div>
+            </div>
+            <div class="col-md-6 align-content-center">
+              <div class="content">
+                <p class="text-white" style="font-size: 16px">
+                  Our vision is to help people improve their wellbeing and reach
+                  their potential through the provision of high quality,
+                  compassionate and responsive residential care.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="image-box d-none">
+            <img src="assets/images/vision3.jpg" alt="Vision Statement" />
+            <div class="text-box">Vision Statement</div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div> -->
-</div>
+  </div>
+
+  <div class="values-section">
+    <h2 class="text-center">Our Values<br /></h2>
+
+    <div class="row values-row">
+      <div class="col-md-6 d-flex flex-column justify-content-center">
+        <div class="text-center text-md-start">
+          <h3 class="mb-3">Empowering...</h3>
+          <p class="mb-0 mb-md-5 pb-3">
+            At speciality care, Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Reprehenderit suscipit beatae harum non porro
+            assumenda consequuntur nemo explicabo libero. Laborum temporibus
+            nihil ducimus et magni, magnam enim natus totam exercitationem.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-3">
+          <div class="col-md-6" *ngFor="let item of services">
+            <div class="service-card">
+              <img [src]="item.icon" [alt]="item.heading" />
+              <h5>{{ item.heading }}</h5>
+              <p>
+                {{ item.message }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="other-services-section">
+    <h2 class="pb-3 pt-5 text-center text-light">Speciality Care's Services</h2>
+    <p class="pb-5 text-center m-0 text-light">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, alias!
+      Aliquid illum ratione velit cupiditate corporis alias doloremque nulla
+      obcaecati delectus, laboriosam similique asperiores ab quam, nihil rerum
+      reiciendis labore!
+    </p>
+    <div class="row g-3">
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="custom-card w-100">
+            <div class="icon-circle">👁️</div>
+            <h5 class="fw-bold">24/7 Supervised Care</h5>
+            <p class="text-muted p-design">
+              Our trained staff is available around the clock to ensure
+              residents receive the care and support they need.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="custom-card custom-card4 w-100">
+            <div class="icon-circle icon-circle2">🤗</div>
+            <h5 class="fw-bold">Mental Health Support</h5>
+            <p class="text-muted p-design">
+              We offer tailored support for individuals managing conditions such
+              as anxiety, depression, bipolar disorder, and other mental health
+              concerns often linked to substance use disorders.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="custom-card custom-card3 w-100">
+            <div class="icon-circle icon-circle3">🩹</div>
+            <h5 class="fw-bold">Substance Abuse Recovery Support</h5>
+            <p class="text-muted p-design">
+              While we are not a detox or rehab center, we provide a structured
+              environment that supports residents in maintaining sobriety and
+              managing triggers. We work closely with therapists, support
+              groups, and recovery programs.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="custom-card custom-card3 w-100">
+            <div class="icon-circle">🧑🏼‍🤝‍🧑🏿</div>
+            <h5 class="fw-bold">Daily Living Assistance</h5>
+            <p class="text-muted p-design">
+              Help with tasks such as meal preparation, medication management,
+              personal care, and housekeeping to promote independence and
+              well-being.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="custom-card w-100">
+            <div class="icon-circle icon-circle2">💆</div>
+            <h5 class="fw-bold">Structured Activities & Therapy</h5>
+            <p class="text-muted p-design">
+              Residents engage in therapeutic and recreational activities that
+              encourage personal growth, social engagement, and coping
+              strategies.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="custom-card custom-card2 w-100">
+            <div class="icon-circle icon-circle3">👨‍👨‍👦‍👦</div>
+            <h5 class="fw-bold">Community Integration</h5>
+            <p class="text-muted p-design">
+              We assist individuals in building life skills, securing employment
+              opportunities (where applicable), and reintegrating into society
+              at their own pace.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="custom-card w-100">
+            <div class="icon-circle">💝</div>
+            <h5 class="fw-bold">Personalised care plans</h5>
+            <p class="text-muted p-design">
+              Every of our resident receives tailored support designed around
+              their unique needs, strengths, and goals.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="custom-card custom-card2 w-100">
+            <div class="icon-circle icon-circle2">🧑‍🤝‍🧑</div>
+            <h5 class="fw-bold">Emotional & Behavioral Support</h5>
+            <p class="text-muted p-design">
+              We use evidence-based approaches like positive behavior support
+              (PBS) to help children manage emotions, reduce anxiety, and
+              develop coping strategies.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="custom-card custom-card3 w-100">
+            <div class="icon-circle icon-circle3">📚</div>
+            <h5 class="fw-bold">Education & Skill Development</h5>
+            <p class="text-muted p-design">
+              We promote learning, communication, and independence, working
+              closely with schools, therapists, and families.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <button class="btn gradient-btn">Send us a message</button>
+    </div>
+  </div>
+
+  <!-- <div class="next-section" style="height: 10vh; background-color: white"></div> -->
+</main>
