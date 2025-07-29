@@ -3,6 +3,11 @@
   border-radius: 20px;
   margin: 20px;
 
+  .navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* optional: avoid menu jumping */
+  }
+
   .navbar-brand img {
     padding-left: 30px;
     height: 50px;
@@ -13,7 +18,7 @@
 
     .nav-link {
       color: #043927 !important;
-      font-size: 20px !important;
+      font-size: 16px !important;
       position: relative;
       font-weight: 500;
 
@@ -43,10 +48,20 @@
     }
 
     .dropdown-menu {
+      padding-top: 15px;
+      border-radius: 15px;
       background-color: rgba(255, 255, 255, 0.9);
 
       .dropdown-item {
         color: #043927;
+
+        &.dropdown-item:hover {
+          color: gray;
+        }
+
+        &.dropdown-item:active {
+          background-color: rgba(255, 255, 255, 0.9);
+        }
       }
     }
   }
