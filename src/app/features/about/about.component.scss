@@ -262,7 +262,7 @@
   }
 
   .values-section {
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    padding-bottom: 40px;
     isolation: isolate;
     background-color: #f0fff080;
 
@@ -345,6 +345,8 @@
 
   .team-section {
     padding: 60px 40px;
+    background-color: #f9f3df;
+    // box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 
     // Variables for colors
     $primary-color: #519259;

@@ -170,37 +170,6 @@
     </div>
   </section>
 
-  <div class="values-section">
-    <h2 class="text-center">Our Values</h2>
-
-    <div class="row values-row">
-      <div class="col-md-6 d-flex flex-column justify-content-center">
-        <div class="text-center text-md-start">
-          <h3 class="mb-3">Empowering...</h3>
-          <p class="mb-0 mb-md-5 pb-3">
-            At speciality care, Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Reprehenderit suscipit beatae harum non porro
-            assumenda consequuntur nemo explicabo libero. Laborum temporibus
-            nihil ducimus et magni, magnam enim natus totam exercitationem.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="row g-3">
-          <div class="col-md-6" *ngFor="let item of services">
-            <div class="service-card">
-              <img [src]="item.icon" [alt]="item.heading" />
-              <h5>{{ item.heading }}</h5>
-              <p>
-                {{ item.message }}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <div class="team-section">
     <h2 class="text-center">Meet the Team</h2>
     <div class="container my-5">
@@ -262,6 +231,37 @@
                   Speciality Care
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="values-section">
+    <h2 class="text-center">Our Values</h2>
+
+    <div class="row values-row">
+      <div class="col-md-6 d-flex flex-column justify-content-center">
+        <div class="text-center text-md-start">
+          <h3 class="mb-3">Empowering...</h3>
+          <p class="mb-0 mb-md-5 pb-3">
+            At speciality care, Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Reprehenderit suscipit beatae harum non porro
+            assumenda consequuntur nemo explicabo libero. Laborum temporibus
+            nihil ducimus et magni, magnam enim natus totam exercitationem.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-3">
+          <div class="col-md-6" *ngFor="let item of services">
+            <div class="service-card">
+              <img [src]="item.icon" [alt]="item.heading" />
+              <h5>{{ item.heading }}</h5>
+              <p>
+                {{ item.message }}
+              </p>
             </div>
           </div>
         </div>
