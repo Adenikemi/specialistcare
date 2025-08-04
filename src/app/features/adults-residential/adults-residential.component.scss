@@ -1,0 +1,67 @@
+.adult-residential-section {
+  .carousel {
+    .carousel-inner {
+      .carousel-item {
+        img {
+          height: 100vh;
+          object-fit: cover;
+        }
+        .carousel-caption {
+          top: 25rem;
+        }
+      }
+    }
+    .carousel-indicators {
+      margin-left: 0;
+      margin-right: 0;
+
+      button {
+        width: 300px;
+      }
+    }
+  }
+
+  .about-section {
+    padding: 60px 40px;
+    background-color: #f0fff080;
+
+    p {
+      font-size: 16px;
+      padding-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 60px;
+      font-weight: bold;
+    }
+
+    .img-container {
+      margin-top: 30px;
+
+      .acorn-img {
+        border-radius: 2rem;
+        border: none;
+        overflow: hidden;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+        img {
+          height: 300px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .homes-section {
+    padding: 40px 0 20px;
+    background-color: #f9f3df;
+    box-shadow: 4px 10px rgba(0, 0, 0, 0.1);
+
+    .img-container {
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+}
