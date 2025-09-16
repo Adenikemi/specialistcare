@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fixed-top" data-aos="fade-up">
+<nav class="navbar navbar-expand-lg" data-aos="fade-up">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">
       <img src="assets\logo\horizontal_logo.svg" alt="specialist care logo" />
@@ -33,28 +33,33 @@
       </div>
       <div class="offcanvas-body d-flex justify-content-end">
         <ul class="navbar-nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
               data-bs-toggle="dropdown"
-              routerLink="/about"
+              (click)="navigate($event, '/about')"
               >About Us</a
             >
             <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="/about">Our Vision</a>
+              <li class="d-none">
+                <a class="dropdown-item" href="/about/vision">Our Vision</a>
               </li>
-              <!-- <li><hr class="dropdown-divider" /></li> -->
-              <li>
-                <a class="dropdown-item" href="/about">Our Approach</a>
+              <li class="d-none">
+                <a class="dropdown-item" href="/about/approach">Our Approach</a>
               </li>
-              <!-- <li><hr class="dropdown-divider" /></li> -->
               <li>
-                <a class="dropdown-item" href="/about">Values</a>
+                <a class="dropdown-item" href="/about/values">Our Values</a>
               </li>
-              <!-- <li><hr class="dropdown-divider" /></li> -->
               <li>
-                <a class="dropdown-item" href="/about">Meet the team</a>
+                <a class="dropdown-item" href="/about/approach">What we do</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/about/meet-the-team"
+                  >Meet the team</a
+                >
               </li>
             </ul>
           </li>
@@ -62,19 +67,36 @@
             <a
               class="nav-link dropdown-toggle"
               data-bs-toggle="dropdown"
-              routerLink="/adults-residential"
+              (click)="navigate($event, '/adults-residential')"
               >Adults Residential</a
             >
             <ul class="dropdown-menu">
               <li>
-                <a class="dropdown-item" href="/adults-residential"
-                  >About (24/7 Supervised Care etc)</a
+                <a
+                  class="dropdown-item"
+                  href="/adults-residential/little-acorns"
+                  >Little Acorns</a
                 >
               </li>
-              <!-- <li><hr class="dropdown-divider" /></li> -->
               <li>
-                <a class="dropdown-item" href="/adults-residential"
-                  >The homes - Little Acorns</a
+                <a
+                  class="dropdown-item"
+                  href="/adults-residential/high-road-house"
+                  >High Road House</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/adults-residential/earles-garden-house"
+                  >Earles Garden House</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/adults-residential/homesdale-house"
+                  >Homesdale House</a
                 >
               </li>
             </ul>
@@ -83,17 +105,13 @@
             <a
               class="nav-link dropdown-toggle"
               data-bs-toggle="dropdown"
-              routerLink="/childrens-residential"
+              (click)="navigate($event, '/childrens-residential')"
               >Children's Residential</a
             >
             <ul class="dropdown-menu">
               <li>
-                <a class="dropdown-item" href="/childrens-residential">About</a>
-              </li>
-              <!-- <li><hr class="dropdown-divider" /></li> -->
-              <li>
-                <a class="dropdown-item" href="/childrens-residential"
-                  >The homes - Topaz House</a
+                <a class="dropdown-item" href="/childrens-residential/topaz"
+                  >Topaz House</a
                 >
               </li>
             </ul>
@@ -102,50 +120,25 @@
             <a
               class="nav-link dropdown-toggle"
               data-bs-toggle="dropdown"
-              routerLink="/supported-living"
+              (click)="navigate($event, '/supported-living')"
               >Supported Living</a
             >
             <ul class="dropdown-menu">
               <li>
-                <a class="dropdown-item" href="/supported-living">About</a>
-              </li>
-              <!-- <li><hr class="dropdown-divider" /></li> -->
-              <li>
-                <a class="dropdown-item" href="/supported-living">The homes</a>
+                <a class="dropdown-item" href="/supported-living/fernwood"
+                  >Fernwood House</a
+                >
               </li>
             </ul>
           </li>
-          <!-- <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              data-bs-toggle="dropdown"
-              routerLink="/"
-              >Our Homes</a
-            >
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="#">Little Acorn</a>
-              </li>
-              <li><hr class="dropdown-divider" /></li>
-              <li>
-                <a class="dropdown-item" href="#"
-                  >Norwich Support Living Home</a
-                >
-              </li>
-              <li><hr class="dropdown-divider" /></li>
-              <li>
-                <a class="dropdown-item" href="#">Child Residential Home</a>
-              </li>
-            </ul>
-          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="/news">News</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/contact">Join our team</a>
+            <a class="nav-link" href="/join-team">Join our team</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/contact">Contact Us</a>
+            <a class="nav-link" href="/contact">Contact Us</a>
           </li>
         </ul>
       </div>

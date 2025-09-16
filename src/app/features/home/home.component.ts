@@ -1,15 +1,42 @@
-// import { NgFor } from '@angular/common';
+import { NgClass, NgFor } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  // imports: [NgFor],
+  imports: [NgFor, NgClass],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
   private router = inject(Router);
+  activeIndex = 0;
+  count = [
+    {
+      src: "assets/images/little_acorn_home.jpg",
+      name: "Little Acorns"
+    },
+    {
+      src: "assets/images/coming_soon2.png",
+      name: "High Road House"
+    },
+    {
+      src: "assets/images/coming_soon2.png",
+      name: "Earles Garden House"
+    },
+    {
+      src: "assets/images/coming_soon2.png",
+      name: "Homesdale House"
+    },
+    {
+      src: "assets/images/topaz.JPG",
+      name: "Topaz House"
+    },
+    {
+      src: "assets/images/coming_soon2.png",
+      name: "Fernwood House"
+    },
+  ]
 
   goToAbout() {
     this.router.navigate(['/about']);
@@ -24,7 +51,7 @@ export class HomeComponent {
       icon: 'assets/logo/empathy.png',
       heading: 'Empathy',
       message:
-        'Here at speciality car, we show compassion and empathy to our residents to ensure they feel safe and comfortable in our care',
+        'Here at speciality care, we show compassion and empathy to our residents to ensure they feel safe and comfortable in our care',
     },
     {
       icon: 'assets/logo/respect.png',
@@ -51,4 +78,16 @@ export class HomeComponent {
         'We organise activities that are geared towards our residents learning skills that promote independent living.',
     },
   ];
+
+  get totalSlides() {
+    return Math.ceil(this.count.length / 3);
+  }
+  
+  prev() {
+    if (this.activeIndex > 0) this.activeIndex--;
+  }
+  
+  next() {
+    if (this.activeIndex < this.totalSlides - 1) this.activeIndex++;
+  }
 }

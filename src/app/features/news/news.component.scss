@@ -1,20 +1,39 @@
 .news-section {
+  background-color: #043927;
+  padding: 0 40px 60px;
   .main-page {
     .heading {
-      padding: 200px 40px 60px;
+      padding: 100px 40px 60px;
       display: flex;
       justify-content: space-between;
 
+      h1 {
+        font-size: 91px;
+        align-content: end;
+        color: white;
+      }
+
       p {
-        max-width: 200px;
+        max-width: 300px;
+        color: white;
       }
     }
 
     .articles-section {
-      margin: 20px;
-      padding: 20px;
+      padding: 40px;
       border-radius: 16px;
       background-color: white;
+
+      h2 {
+        margin-top: 20px;
+        font-size: 40px;
+        color: #360802;
+      }
+
+      p {
+        font-size: 20px;
+        color: #360802;
+      }
 
       .image-box {
         position: relative;
@@ -30,12 +49,12 @@
 
         .text-box {
           position: absolute;
-          bottom: 20px;
-          left: 20px;
+          top: 20px;
+          right: 20px;
           background-color: #2e6e59;
           color: white;
-          padding: 15px 20px;
-          border-radius: 12px;
+          padding: 10px;
+          border-radius: 32px;
           font-size: 16px;
           font-weight: 500;
         }

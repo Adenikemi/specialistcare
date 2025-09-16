@@ -1,0 +1,74 @@
+<main class="little-acorn-page">
+  <section class="about-section">
+    <div class="text-center">
+      <h1>Adult's Residential > Little Acorns</h1>
+      <p class="pb-0">
+        A welcoming 15-bed coastal home with en-suite bedrooms, communal spaces,
+        and a secure garden.
+      </p>
+    </div>
+  </section>
+  <section class="homes-section">
+    <h2 class="text-center pb-3">Little Acorns</h2>
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div
+          class="carousel-item"
+          *ngFor="let group of [].constructor(totalSlides); let i = index"
+          [ngClass]="{ active: i === 0 }"
+        >
+          <div class="row">
+            <div
+              class="col-md-4"
+              *ngFor="let image of count.slice(i * 3, i * 3 + 3)"
+            >
+              <div class="image-box">
+                <img [src]="image.src" alt="Vision Statement" />
+                <div class="text-box">{{ image.name }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="prev"
+        (click)="prev()"
+        [disabled]="activeIndex === 0"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="next"
+        (click)="next()"
+        [disabled]="activeIndex === totalSlides - 1"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+  <section class="contact-section">
+    <div class="main-container">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="d-flex flex-column align-items-center">
+              <div class="text-center">
+                <h2>Contact Us</h2>
+                <p>Stay in touch, keep with our latest trend and update!</p>
+                <button>Contact Us</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

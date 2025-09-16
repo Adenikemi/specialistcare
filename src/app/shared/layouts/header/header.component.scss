@@ -1,27 +1,31 @@
 .navbar {
+  backdrop-filter: blur(22px);
   background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 20px;
+  box-shadow: 5px 5px 10px #0000004d;
+  border-radius: 50px;
   margin: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  // backdrop-filter: blur(22px);
 
   .navbar-nav .dropdown:hover .dropdown-menu {
     display: block;
-    margin-top: 0; /* optional: avoid menu jumping */
+    margin-top: 0;
   }
 
   .navbar-brand img {
-    padding-left: 30px;
+    padding-left: 5px;
     height: 50px;
   }
 
   .nav-item {
-    padding-right: 30px;
+    padding-right: 10px;
 
     .nav-link {
       color: #043927 !important;
       font-size: 16px !important;
       position: relative;
       font-weight: 500;
+      cursor: pointer;
 
       &.nav-link:hover,
       &.nav-link.active {
@@ -58,6 +62,7 @@
 
         &.dropdown-item:hover {
           color: gray;
+          border-radius: 5px;
         }
 
         &.dropdown-item:active {
