@@ -1,1 +1,445 @@
-<p>contact works!</p>
+<main class="contact-page">
+  <section class="hero-section">
+    <nav
+      aria-label="breadcrumb"
+      style="--bs-breadcrumb-divider: '>'; justify-items: center"
+      class="slide-in"
+    >
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#" style="color: white; text-decoration: none">Home</a>
+        </li>
+        <li
+          class="breadcrumb-item active"
+          aria-current="page"
+          style="color: white"
+        >
+          Contact Us
+        </li>
+      </ol>
+    </nav>
+  </section>
+  <section class="form-section slide-in">
+    <div id="automate-nav" class="carousel">
+      <div class="row tab-row carousel-indicators">
+        <div class="col-6 col-md-4 tab-col">
+          <button
+            type="button"
+            data-bs-target="#automate-nav"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          >
+            General Enquiry
+          </button>
+        </div>
+        <div class="col-6 col-md-4 tab-col">
+          <button
+            type="button"
+            data-bs-target="#automate-nav"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          >
+            Make Referral
+          </button>
+        </div>
+        <div class="col-6 col-md-4 tab-col">
+          <button
+            type="button"
+            data-bs-target="#automate-nav"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          >
+            Feedback
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <main class="contact-page">
+                <div class="contact-form">
+                  <h1 class="text-center fw-bold">Get in Touch</h1>
+                  <p class="text-center text-muted">
+                    If you'd like to start a conversation about Specialist Care,
+                    or to arrange a visit to one of our support services, please
+                    complete the form below and we'll be in touch to arrange the
+                    next steps.
+                  </p>
+
+                  <form (ngSubmit)="sendEmail('Enquiry')">
+                    <div class="row mb-3">
+                      <div class="col">
+                        <label class="form-label required">First Name</label>
+                        <input
+                          type="text"
+                          [(ngModel)]="firstName"
+                          name="firstName"
+                          class="form-control"
+                          placeholder="Your first name"
+                        />
+                      </div>
+                      <div class="col">
+                        <label class="form-label required">Last Name</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="lastName"
+                          [(ngModel)]="lastName"
+                          placeholder="Your last name"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label required">Email Address</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        [(ngModel)]="email"
+                        placeholder="your.email@example.com"
+                      />
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label">Phone Number</label>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        name="phoneNumber"
+                        [(ngModel)]="phoneNumber"
+                        placeholder="(123) 456-7890"
+                      />
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label required"
+                        >How did you hear about Us?</label
+                      >
+                      <textarea
+                        class="form-control"
+                        [(ngModel)]="reason"
+                        name="reason"
+                        rows="3"
+                        placeholder="Write your message here..."
+                      ></textarea>
+                    </div>
+
+                    <div class="d-grid">
+                      <button type="submit" class="btn btn-primary border-0">
+                        Submit
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </main>
+            </div>
+            <div class="carousel-item">
+              <main class="contact-page">
+                <div class="contact-form">
+                  <h1 class="text-center fw-bold">Make a Referral</h1>
+                  <p class="text-center text-muted">
+                    If you'd like to make a referral for Specialist Care, please
+                    complete the form below and we'll be in touch to arrange the
+                    next steps.
+                  </p>
+
+                  <form (ngSubmit)="sendEmail('Referral')">
+                    <div class="mb-3">
+                      <label class="form-label required"
+                        >Relation to Contact</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="relation"
+                        [(ngModel)]="relation"
+                        placeholder="Enter your relation to the contact"
+                      />
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col">
+                        <label class="form-label required"
+                          >Referral First Name</label
+                        >
+                        <input
+                          type="text"
+                          [(ngModel)]="firstName"
+                          name="firstName"
+                          class="form-control"
+                          placeholder="Referral's first name"
+                        />
+                      </div>
+                      <div class="col">
+                        <label class="form-label required"
+                          >Referral Last Name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="lastName"
+                          [(ngModel)]="lastName"
+                          placeholder="Referral's last name"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label required"
+                        >Referral's Email Address</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        [(ngModel)]="email"
+                        placeholder="your.email@example.com"
+                      />
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label">Referral's Phone Number</label>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        name="phoneNumber"
+                        [(ngModel)]="phoneNumber"
+                        placeholder="(123) 456-7890"
+                      />
+                    </div>
+
+                    <div class="row mb-3">
+                      <div class="col">
+                        <label class="form-label required">First Name</label>
+                        <input
+                          type="text"
+                          [(ngModel)]="firstName"
+                          name="firstName"
+                          class="form-control"
+                          placeholder="Your first name"
+                        />
+                      </div>
+                      <div class="col">
+                        <label class="form-label required">Last Name</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="lastName"
+                          [(ngModel)]="lastName"
+                          placeholder="Your last name"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label required">Email Address</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        [(ngModel)]="email"
+                        placeholder="your.email@example.com"
+                      />
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label">Phone Number</label>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        name="phoneNumber"
+                        [(ngModel)]="phoneNumber"
+                        placeholder="(123) 456-7890"
+                      />
+                    </div>
+
+                    <div class="row mb-3">
+                      <div class="col">
+                        <label class="form-label">Enquiry Related To:</label>
+                        <select
+                          class="form-select"
+                          [(ngModel)]="enquiry"
+                          name="enquiry"
+                          placeholder="Select enquiry relation service"
+                        >
+                          <option selected>
+                            Select enquiry relation service
+                          </option>
+                          <option>Adult residential</option>
+                          <option>Children residential</option>
+                          <option>Support Living</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label required">Your Message</label>
+                      <textarea
+                        class="form-control"
+                        [(ngModel)]="reason"
+                        name="reason"
+                        rows="3"
+                        placeholder="Write your message here..."
+                      ></textarea>
+                    </div>
+
+                    <div class="d-grid">
+                      <button type="submit" class="btn btn-primary border-0">
+                        Submit
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </main>
+            </div>
+            <div class="carousel-item">
+               
+              <main class="contact-page">
+                <div class="contact-form">
+                  <h1 class="text-center fw-bold">Your Feedback</h1>
+                  <p class="text-center text-muted">
+                    We appreciate your feedback on our services, kindly drop
+                    your feedback in the form below.
+                  </p>
+
+                  <form (ngSubmit)="sendEmail('Feedback')">
+                    <div class="row mb-3">
+                      <div class="col">
+                        <label class="form-label required">First Name</label>
+                        <input
+                          type="text"
+                          [(ngModel)]="firstName"
+                          name="firstName"
+                          class="form-control"
+                          placeholder="Your first name"
+                        />
+                      </div>
+                      <div class="col">
+                        <label class="form-label required">Last Name</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="lastName"
+                          [(ngModel)]="lastName"
+                          placeholder="Your last name"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label required">Email Address</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        [(ngModel)]="email"
+                        placeholder="your.email@example.com"
+                      />
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label">Phone Number</label>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        name="phoneNumber"
+                        [(ngModel)]="phoneNumber"
+                        placeholder="(123) 456-7890"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label required"
+                        >How did you hear about Us?</label
+                      >
+                      <textarea
+                        class="form-control"
+                        [(ngModel)]="reason"
+                        name="reason"
+                        rows="3"
+                        placeholder="Write your message here..."
+                      ></textarea>
+                    </div>
+
+                    <div class="d-grid">
+                      <button type="submit" class="btn btn-primary border-0">
+                        Submit
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </main>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="map-section py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <div class="map-wrapper shadow-sm rounded overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d4830.553494299955!2d1.7020092590255755!3d52.593804453927454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sUnit%201c%20Millenium%20House%2C%20Gapton%20Hall%20Road%2C%20Great%20Yarmouth%2C%20Norfolk%2C%20England%2C%20NR31%20ONL!5e0!3m2!1sen!2sng!4v1757068552670!5m2!1sen!2sng"
+              width="100%"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="contact-card p-4 shadow-sm rounded bg-white">
+            <h4 class="fw-bold mb-3">Contact Information</h4>
+            <p class="text-muted mb-4">
+              Reach out to us for appointments, enquiries, or to learn more
+              about our services.
+            </p>
+
+            <div class="d-flex align-items-start mb-3">
+              <i class="bi bi-envelope-fill contact-icon me-2"></i>
+              <div>
+                <strong>Email:</strong><br />
+                <a
+                  href="mailto:info@clearlycare.co.uk"
+                  class="text-decoration-none text-dark"
+                >
+                  info&#x40;specialitycare.com
+                </a>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start mb-3">
+              <i class="bi bi-telephone-fill contact-icon me-2"></i>
+              <div>
+                <strong>Phone:</strong><br />
+                <a
+                  href="tel:01493 804030"
+                  class="text-decoration-none text-dark"
+                >
+                  01493 804030
+                </a>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start">
+              <i class="bi bi-geo-alt-fill contact-icon me-2"></i>
+              <div>
+                <strong>Address:</strong><br />
+                Unit 1c Millenium House, <br />
+                Gapton Hall Road, Great <br />
+                Yarmouth, Norfolk, England, NR31 ONL
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fixed-top">
+<nav class="navbar navbar-expand-lg" data-aos="fade-up">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">
       <img src="assets\logo\horizontal_logo.svg" alt="specialist care logo" />
@@ -31,79 +31,109 @@
           aria-label="Close"
         ></button>
       </div>
-      <div class="offcanvas-body d-flex align-items-center">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+      <div class="offcanvas-body d-flex justify-content-end">
+        <ul class="navbar-nav justify-content-end">
           <li class="nav-item">
-            <a class="nav-link" id="home" aria-current="page" routerLink="/"
-              >About</a
-            >
+            <a class="nav-link" href="/">Home</a>
           </li>
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
               data-bs-toggle="dropdown"
-              routerLink="/"
-              >Services</a
+              (click)="navigate($event, '/about')"
+              >About Us</a
             >
             <ul class="dropdown-menu">
               <li>
-                <a class="dropdown-item" href="#">24/7 Supervised Care</a>
+                <a class="dropdown-item" href="/about/values">Our Values</a>
               </li>
-              <li><hr class="dropdown-divider" /></li>
               <li>
-                <a class="dropdown-item" href="#">Mental Health Support</a>
+                <a class="dropdown-item" href="/about/approach">What we do</a>
               </li>
-              <li><hr class="dropdown-divider" /></li>
-              <li>
-                <a class="dropdown-item" href="#"
-                  >Substance Abuse Recovery Support</a
+              <!-- For Now -->
+              <li class="d-none">
+                <a class="dropdown-item" href="/about/meet-the-team"
+                  >Meet the team</a
                 >
               </li>
-              <li><hr class="dropdown-divider" /></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              (click)="navigate($event, '/adults-residential')"
+              >Adults Residential</a
+            >
+            <ul class="dropdown-menu">
               <li>
-                <a class="dropdown-item" href="#">Daily Living Assistance</a>
-              </li>
-              <li><hr class="dropdown-divider" /></li>
-              <li>
-                <a class="dropdown-item" href="#"
-                  >Structured Activities & Therapy</a
+                <a
+                  class="dropdown-item"
+                  href="/adults-residential/little-acorns"
+                  >Little Acorns</a
                 >
               </li>
-              <li><hr class="dropdown-divider" /></li>
               <li>
-                <a class="dropdown-item" href="#">Community Integration</a>
-              </li>
-              <li><hr class="dropdown-divider" /></li>
-              <li>
-                <a class="dropdown-item" href="#">Personalised Care Plans</a>
-              </li>
-              <li><hr class="dropdown-divider" /></li>
-              <li>
-                <a class="dropdown-item" href="#"
-                  >Emotional & Behavioral Support</a
+                <a
+                  class="dropdown-item"
+                  href="/adults-residential/high-road-house"
+                  >High Road House</a
                 >
               </li>
-              <li><hr class="dropdown-divider" /></li>
               <li>
-                <a class="dropdown-item" href="#"
-                  >Education & Skill Development</a
+                <a
+                  class="dropdown-item"
+                  href="/adults-residential/earles-garden-house"
+                  >Earles Garden House</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/adults-residential/homesdale-house"
+                  >Homesdale House</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              (click)="navigate($event, '/childrens-residential')"
+              >Children's Residential</a
+            >
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="/childrens-residential/topaz"
+                  >Topaz House</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              (click)="navigate($event, '/supported-living')"
+              >Supported Living</a
+            >
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="/supported-living/fernwood"
+                  >Fernwood House</a
                 >
               </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" routerLink="/services"
-              >Amenities</a
-            >
+            <a class="nav-link" href="/news">News</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/contact">Safety and Security</a>
+            <a class="nav-link" href="/join-team">Join our team</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/contact">Resident Stories</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/contact">Contact Us</a>
+            <a class="nav-link" href="/contact">Contact Us</a>
           </li>
         </ul>
       </div>

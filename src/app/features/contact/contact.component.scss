@@ -1,0 +1,258 @@
+.contact-page {
+  .hero-section {
+    height: 45vh;
+    overflow: hidden;
+    background-size: cover;
+    text-align: center;
+    align-content: center;
+    padding: 20px;
+    margin-top: 100px;
+
+    &.hero-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 75vh;
+      background: url("/assets/images/contact2.jpg") no-repeat center;
+      background-size: cover;
+      z-index: -1;
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before {
+      color: white !important;
+    }
+
+    li {
+      font-size: 60px;
+      font-weight: 600;
+      text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.5),
+        0px 0px 2px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .form-section {
+    padding: 40px 0;
+    background: linear-gradient(to right, #064635, #27ae60);
+
+    h2 {
+      margin-bottom: 24px;
+
+      @media (width <= 768px) {
+          span {
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 44px;
+        }
+      }
+    }
+    @media (width >= 768px) {
+      padding: 60px 0;
+      align-items: center;
+    }
+
+    #automate-nav {
+      .tab-row {
+        margin-left: -10px;
+        margin-right: -10px;
+        row-gap: 24px;
+        justify-content: center;
+        margin-bottom: 24px;
+        position: static;
+
+        @media (width >= 992px) {
+          column-gap: 32px;
+          margin-bottom: 32px;
+        }
+
+        .tab-col {
+          padding: 0 10px;
+
+          @media (width >= 768px) {
+            width: fit-content;
+            padding: 0;
+          }
+
+          button {
+            height: 100%;
+            padding: 8px;
+            border-radius: 20px;
+            width: 100%;
+            border: 1px solid white;
+            color: black;
+            background: white;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+            text-indent: 0;
+            opacity: 1;
+
+            @media (width >= 992px) {
+              border: none;
+              color: white;
+              background: none;
+              font-size: 16px;
+            }
+
+            &.active {
+              border: 1px solid white;
+              color: black;
+              background: white;
+            }
+          }
+        }
+      }
+
+      .contact-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 60px;
+
+        .contact-form {
+          background: white;
+          padding: 40px;
+          border-radius: 16px;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          max-width: 800px;
+          width: 100%;
+        }
+        .form-control {
+          border-radius: 8px;
+        }
+        .form-label {
+          font-weight: 600;
+        }
+        .required::after {
+          content: " *";
+          color: red;
+        }
+        button {
+          background: linear-gradient(to right, #064635, #27ae60);
+        }
+        button:hover {
+          background: linear-gradient(
+            linear-gradient(to right, #064635, #1e8449)
+          );
+        }
+      }
+
+      .automate-img {
+        .automate-image {
+          border-radius: 10.13px;
+
+          @media (width >= 992px) {
+            border-radius: 16px;
+          }
+        }
+      }
+
+      .automate-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+          h1 {
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 32px;
+          text-align: left;
+          margin-bottom: 16px;
+          color: var(--remita-mobile-neutral-neutral-85);
+
+          @media (width >= 992px) {
+            font-size: 28px;
+            line-height: 40px;
+            letter-spacing: 0.0025em;
+          }
+        }
+
+        p {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 20px;
+          text-align: left;
+          margin-bottom: 24px;
+          color: var(--remita-mobile-neutral-neutral-7);
+
+          @media (width >= 992px) {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 40px;
+          }
+        }
+            a {
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 24px;
+          text-align: left;
+          color: var(--remita-mobile-primary-primary-5);
+
+          @media (width < 768px) {
+            margin-bottom: 24px;
+          }
+
+          @media (width >= 992px) {
+            font-size: 18px;
+          }
+
+          .arrow {
+            margin-left: 4px;
+            height: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .map-section {
+    background-color: #f0fdf4;
+
+    .map-wrapper {
+      iframe {
+        border-radius: 8px;
+      }
+    }
+
+    .contact-card {
+      border-radius: 12px;
+      background-color: #fff;
+
+      h4 {
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+
+      .contact-icon {
+        font-size: 1.2rem;
+        color: #27ae60;
+        flex-shrink: 0;
+        margin-top: 3px;
+      }
+
+      a {
+        color: #333;
+        &:hover {
+          color: #27ae60;
+        }
+      }
+    }
+  }
+}

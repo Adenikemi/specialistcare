@@ -1,0 +1,123 @@
+<main class="little-acorn-page">
+  <section class="about-section">
+    <div class="text-center">
+      <h1 class="slide-in">Adult's Residential > Little Acorns</h1>
+      <p class="pb-0 slide-in">
+        A welcoming 15-bed coastal home with en-suite bedrooms, communal spaces,
+        and a secure garden.
+      </p>
+    </div>
+  </section>
+  <section class="homes-section slide-in">
+    <h2 class="text-center pb-3">Little Acorns</h2>
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div
+          class="carousel-item"
+          *ngFor="let group of [].constructor(totalSlides); let i = index"
+          [ngClass]="{ active: i === 0 }"
+        >
+          <div class="row">
+            <div
+              class="col-md-4"
+              *ngFor="let image of count.slice(i * 3, i * 3 + 3)"
+            >
+              <div class="image-box">
+                <img [src]="image.src" alt="Vision Statement" />
+                <!-- <div class="text-box">{{ image.name }}</div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="prev"
+        (click)="prev()"
+        [disabled]="activeIndex === 0"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="next"
+        (click)="next()"
+        [disabled]="activeIndex === totalSlides - 1"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+  <app-accreditation [isCQC]="isCQC" [isOfsted]="isOfsted"></app-accreditation>
+
+  <!-- <section class="bg-light position-relative overflow-hidden">
+    Animated background blobs
+    <div class="position-relative overflow-hidden">
+      <div
+        class="position-relative rounded-circle bg-primary opacity-25"
+        style="width: 120px; height: 120px; animation: pulse 4s infinite"
+      ></div>
+      <div
+        class="position-relative rounded-circle bg-success opacity-25 blur"
+        style="width: 160px; height: 160px; animation: pulse 4s infinite 2s"
+      ></div>
+      <div
+        class="position-relative translate-middle-x rounded-circle bg-danger opacity-25 blur"
+        style="width: 140px; height: 140px; animation: pulse 4s infinite 4s"
+      ></div>
+    </div>
+
+    <div class="position-relative z-1 text-center pt-5">
+      Header Section
+      <section class="py-5 px-3">
+        <div
+          class="d-inline-flex align-items-center gap-2 mb-4 bg-white bg-opacity-75 rounded-pill border border-success px-4 py-2"
+        >
+          <i class="bi bi-stars text-success"></i>
+          <span class="fw-semibold text-success">Excellence Certified</span>
+        </div>
+
+        <h1
+          class="display-3 fw-bold bg-gradient bg-gradient-primary bg-gradient text-dark mb-3"
+        >
+          Trusted & Accredited
+        </h1>
+
+        <p class="lead text-secondary mx-auto w-75">
+          Our commitment to excellence is demonstrated through rigorous
+          accreditations and adherence to the highest standards in social care.
+        </p>
+      </section>
+
+      Ofsted Badge Section
+      <section class="py-5 px-3">
+        <div
+          class="mx-auto card border-2 border-success shadow-lg bg-white bg-opacity-75"
+          style="max-width: 600px"
+        >
+          <div class="card-body p-5">
+            <div class="mb-4">
+              <div
+                class="mx-auto rounded-circle bg-light border border-white shadow p-4"
+                style="width: 100px; height: 100px"
+              >
+                <div class="fs-2 fw-bold text-success">✓</div>
+                <small class="fw-semibold text-success">Ofsted</small>
+              </div>
+            </div>
+            <h2 class="fw-bold display-6">Coming Soon! 🚀</h2>
+            <p class="text-muted fw-medium">
+              Ofsted Registration is on the horizon
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section> -->
+</main>
