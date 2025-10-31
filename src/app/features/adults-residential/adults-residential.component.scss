@@ -2,7 +2,6 @@
   .about-section {
     padding: 80px 40px;
     color: white;
-    // background-color: #f0fff080;
 
     p {
       font-size: 16px;
@@ -31,22 +30,8 @@
     }
   }
 
-  .homes-section {
-    padding: 40px 0 20px;
-    background-color: #f9f3df;
-    box-shadow: 4px 10px rgba(0, 0, 0, 0.1);
-
-    .img-container {
-      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-      img {
-        object-fit: cover;
-      }
-    }
-  }
-
   .all-services-section {
     padding: 40px 0;
-    background-color: #f9f3df;
 
     p {
       font-size: 14px;

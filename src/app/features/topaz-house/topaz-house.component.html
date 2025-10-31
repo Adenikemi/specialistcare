@@ -1,6 +1,6 @@
 <main class="little-acorn-page">
   <section class="about-section">
-    <div class="text-center">
+    <div class="text-center slide-in">
       <h1>Children's Residential > Topaz House</h1>
       <p class="pb-0">
         A cheerful 4-bedroom home designed for children who need a safe,
@@ -10,7 +10,7 @@
       </p>
     </div>
   </section>
-  <section class="homes-section">
+  <section class="homes-section slide-in">
     <h2 class="text-center pb-3">Topaz House</h2>
     <div id="carouselExample" class="carousel slide">
       <div class="carousel-inner">
@@ -26,7 +26,7 @@
             >
               <div class="image-box">
                 <img [src]="image.src" alt="Vision Statement" />
-                <div class="text-box">{{ image.name }}</div>
+                <!-- <div class="text-box">{{ image.name }}</div> -->
               </div>
             </div>
           </div>
@@ -56,6 +56,8 @@
       </button>
     </div>
   </section>
+  <app-accreditation [isCQC]="isCQC" [isOfsted]="isOfsted"></app-accreditation>
+
   <section class="contact-section">
     <div class="main-container">
       <div class="container">

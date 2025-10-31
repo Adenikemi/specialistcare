@@ -13,8 +13,7 @@ import { ValuesComponent } from './features/values/values.component';
 import { VisionComponent } from './features/vision/vision.component';
 import { LittleAcornsComponent } from './features/little-acorns/little-acorns.component';
 import { TopazHouseComponent } from './features/topaz-house/topaz-house.component';
-import { FernwoodHouseComponent } from './features/fernwood-house/fernwood-house.component';
-import { ComingSoonComponent } from './features/coming-soon/coming-soon.component';
+import { ComingSoonComponent } from './shared/components/coming-soon/coming-soon.component';
 
 export const routes: Routes = [
     { path: "", component: HomeComponent },
@@ -33,6 +32,6 @@ export const routes: Routes = [
     { path: "join-team", component: JoinTeamComponent },
     { path: "news", component: NewsComponent },
     { path: "supported-living", component: SupportedLivingComponent },
-    { path: "supported-living/fernwood", component: FernwoodHouseComponent },
+    { path: "supported-living/fernwood", component: ComingSoonComponent },
     { path: "contact", component: ContactComponent }
 ];

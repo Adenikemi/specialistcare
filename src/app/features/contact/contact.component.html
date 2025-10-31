@@ -3,6 +3,7 @@
     <nav
       aria-label="breadcrumb"
       style="--bs-breadcrumb-divider: '>'; justify-items: center"
+      class="slide-in"
     >
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
@@ -18,7 +19,7 @@
       </ol>
     </nav>
   </section>
-  <section class="form-section">
+  <section class="form-section slide-in">
     <div id="automate-nav" class="carousel">
       <div class="row tab-row carousel-indicators">
         <div class="col-6 col-md-4 tab-col">
@@ -68,7 +69,7 @@
                     next steps.
                   </p>
 
-                  <form (ngSubmit)="sendEmail()">
+                  <form (ngSubmit)="sendEmail('Enquiry')">
                     <div class="row mb-3">
                       <div class="col">
                         <label class="form-label required">First Name</label>
@@ -114,34 +115,6 @@
                       />
                     </div>
 
-                    <div class="row mb-3 d-none">
-                      <div class="col">
-                        <label class="form-label"
-                          >Youth's Name (if applicable)</label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          name="childName"
-                          [(ngModel)]="childName"
-                          placeholder="Youth's name"
-                        />
-                      </div>
-                      <div class="col">
-                        <label class="form-label">Youth's Age</label>
-                        <select
-                          class="form-select"
-                          [(ngModel)]="childAge"
-                          name="childAge"
-                        >
-                          <option selected>Select age range</option>
-                          <option>9-12 years</option>
-                          <option>13-14 years</option>
-                          <option>15-17 years</option>
-                        </select>
-                      </div>
-                    </div>
-
                     <div class="mb-3">
                       <label class="form-label required"
                         >How did you hear about Us?</label
@@ -174,7 +147,7 @@
                     next steps.
                   </p>
 
-                  <form (ngSubmit)="sendEmail()">
+                  <form (ngSubmit)="sendEmail('Referral')">
                     <div class="mb-3">
                       <label class="form-label required"
                         >Relation to Contact</label
@@ -201,7 +174,9 @@
                         />
                       </div>
                       <div class="col">
-                        <label class="form-label required">Last Name</label>
+                        <label class="form-label required"
+                          >Referral Last Name</label
+                        >
                         <input
                           type="text"
                           class="form-control"
@@ -330,7 +305,7 @@
                     your feedback in the form below.
                   </p>
 
-                  <form (ngSubmit)="sendEmail()">
+                  <form (ngSubmit)="sendEmail('Feedback')">
                     <div class="row mb-3">
                       <div class="col">
                         <label class="form-label required">First Name</label>
@@ -405,12 +380,12 @@
   <section class="map-section py-5">
     <div class="container">
       <div class="row g-4 align-items-center">
-        <div class="col-lg-7">
+        <div class="col-lg-6">
           <div class="map-wrapper shadow-sm rounded overflow-hidden">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d4830.553494299955!2d1.7020092590255755!3d52.593804453927454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sUnit%201c%20Millenium%20House%2C%20Gapton%20Hall%20Road%2C%20Great%20Yarmouth%2C%20Norfolk%2C%20England%2C%20NR31%20ONL!5e0!3m2!1sen!2sng!4v1757068552670!5m2!1sen!2sng"
               width="100%"
-              height="450"
+              height="300"
               style="border: 0"
               allowfullscreen=""
               loading="lazy"
@@ -419,7 +394,7 @@
           </div>
         </div>
 
-        <div class="col-lg-5">
+        <div class="col-lg-6">
           <div class="contact-card p-4 shadow-sm rounded bg-white">
             <h4 class="fw-bold mb-3">Contact Information</h4>
             <p class="text-muted mb-4">

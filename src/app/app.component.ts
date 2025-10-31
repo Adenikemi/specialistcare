@@ -3,11 +3,11 @@ import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Rout
 import { LoaderService } from './services/loader.service';
 import { FooterComponent } from './shared/layouts/footer/footer.component';
 import { HeaderComponent } from './shared/layouts/header/header.component';
-// import * as AOS from "aos";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [FooterComponent, HeaderComponent, RouterModule],
+  imports: [FooterComponent, HeaderComponent, RouterModule, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -24,12 +24,4 @@ export class AppComponent {
       }
     });
   }
-
-  // ngOnInit() {
-  //   AOS.init({
-  //     duration: 800,
-  //     easing: 'ease-in-out',
-  //     once: true
-  //   });
-  // }
 }

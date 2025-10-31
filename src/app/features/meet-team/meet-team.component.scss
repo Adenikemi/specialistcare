@@ -37,19 +37,14 @@
   .team-section {
     padding: 60px 40px;
     background-color: #f9f3df;
-    // box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-
-    // Variables for colors
     $primary-color: #519259;
-    $secondary-color: #f0fff0; // Light green for the home card icon
-    $tertiary-color: #fce2e2; // Light pink for the heart card icon
-
-    // --- Styles for the first set of cards (feature-card) ---
+    $secondary-color: #f0fff0;
+    $tertiary-color: #fce2e2;
 
     .feature-card {
       border: none;
-      border-radius: 1.5rem; // Highly rounded corners
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); // Subtle box shadow
+      border-radius: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 
       .card-body {
         padding: 2rem;
@@ -66,21 +61,20 @@
 
         i {
           font-size: 2rem;
-          // You can add styles for the icon here
         }
       }
 
       .icon-home {
-        background-color: #f5f0e3; // Lighter cream background
+        background-color: #f5f0e3;
         i {
-          color: #bfa877; // Darker cream icon color
+          color: #bfa877;
         }
       }
 
       .icon-heart {
-        background-color: #fde5e5; // Lighter pink background
+        background-color: #fde5e5;
         i {
-          color: #ff9191; // Darker pink icon color
+          color: #ff9191;
         }
       }
 
@@ -90,16 +84,14 @@
       }
     }
 
-    // --- Styles for the second set of cards (sponsorship-card) ---
-
     .sponsorship-card {
       border: none;
       border-radius: 2rem;
-      overflow: hidden; // Important to ensure the image and body respect the rounded corners
+      overflow: hidden;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 
       .card-img-top {
-        height: 200px; // Adjust as needed
+        height: 200px;
         object-fit: cover;
       }
 
@@ -114,7 +106,6 @@
         object-fit: contain;
       }
 
-      // Background colors for the bottom section
       .west-ham-bg {
         background-color: #8c2a38;
       }
@@ -131,16 +122,12 @@
 
   .contact-section {
     padding: 30px;
-    // backdrop-filter: blur(22px);
-    // background: rgba(255, 255, 255, 0.06);
 
     .main-container {
       border-radius: 8px;
       backdrop-filter: blur(22px);
       background: rgba(255, 255, 255, 0.06);
       border: 2px solid white;
-
-      // background-color: white;
       padding: 60px 20px;
 
       h2 {

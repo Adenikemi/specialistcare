@@ -2,7 +2,6 @@
   .about-section {
     padding: 80px 40px;
     color: white;
-    // background-color: #f0fff080;
 
     p {
       font-size: 16px;
@@ -60,18 +59,32 @@
         font-weight: 500;
       }
     }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      border-radius: 50px;
+      background-color: #2e6e59;
+      padding: 25px;
+      position: absolute;
+    }
+
+    .carousel-control-next-icon {
+      right: 40px;
+    }
+
+    .carousel-control-prev-icon {
+      left: 30px;
+    }
   }
 
   .contact-section {
     padding: 30px;
-    backdrop-filter: blur(22px);
-    background: rgba(255, 255, 255, 0.06);
 
     .main-container {
       border-radius: 8px;
       backdrop-filter: blur(22px);
       background: rgba(255, 255, 255, 0.06);
-      border: 2px solid white;
+      // border: 2px solid white;
       padding: 60px 20px;
 
       h2 {
@@ -79,12 +92,12 @@
         font-weight: 600;
         line-height: 44px;
         color: white;
-        // background: linear-gradient(118deg, white 20%, #043927 80%);
-        // background-clip: text;
-        // -webkit-text-fill-color: transparent;
         padding-bottom: 10px;
-        text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.5),
-          0px 0px 2px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.1);
+        // text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.5),
+        //   0px 0px 2px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.1);
+        background: linear-gradient(118deg, wheat 20%, brown 80%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
 
       p {

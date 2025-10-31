@@ -1,10 +1,11 @@
-import { NgClass, NgFor } from '@angular/common';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { AccreditationComponent } from '../../shared/components/accreditation/accreditation.component';
 
 @Component({
   selector: 'app-home',
-  imports: [NgFor, NgClass],
+  imports: [AccreditationComponent, NgFor, NgClass ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
@@ -13,7 +14,7 @@ export class HomeComponent {
   activeIndex = 0;
   count = [
     {
-      src: "assets/images/little_acorn_home.jpg",
+      src: "assets/images/houses/little_acorn_home.jpg",
       name: "Little Acorns"
     },
     {
@@ -29,7 +30,7 @@ export class HomeComponent {
       name: "Homesdale House"
     },
     {
-      src: "assets/images/topaz.JPG",
+      src: "assets/images/houses/topaz.jpg",
       name: "Topaz House"
     },
     {
@@ -37,6 +38,8 @@ export class HomeComponent {
       name: "Fernwood House"
     },
   ]
+  isCQC = true;
+  isOfsted = true;
 
   goToAbout() {
     this.router.navigate(['/about']);

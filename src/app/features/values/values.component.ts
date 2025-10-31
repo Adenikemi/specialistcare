@@ -13,31 +13,31 @@ export class ValuesComponent {
       icon: 'assets/logo/empathy.png',
       heading: 'Empathy',
       message:
-        'Here at speciality care, we show compassion and empathy to our residents to ensure they feel safe and comfortable in our care',
+        'Here at speciality care, we listen, understand, and walk alongside each person on dtheir journey.',
     },
     {
       icon: 'assets/logo/respect.png',
       heading: 'Respect',
       message:
-        'Here at speciality care, we ensure to respect our residents by understanding their personal space and boundaries.',
+        'Here at speciality care, we ensure to respect our residents by valuing individuality, culture, and choice.',
     },
     {
       icon: 'assets/logo/equality.png',
       heading: 'Equality',
       message:
-        'All our residents can express their wishes and preferences which allows them to have a positive experience at speciality care.',
+        'All our residents can express their wishes and preferences because we create fair, inclusive spaces where everyone can thrive.',
     },
     {
       icon: 'assets/logo/care.png',
       heading: 'Care',
       message:
-        'The staff are patient with the residents and they understand the impact poor mental Health.',
+        'Here at Specialist Care, we provide safe, nurturing environments with wellbeing at the centre.',
     },
     {
       icon: 'assets/logo/independence.png',
       heading: 'Independence',
       message:
-        'We organise activities that are geared towards our residents learning skills that promote independent living.',
+        'We empower people to grow in confidence and live life on their own terms.',
     },
   ];
 }

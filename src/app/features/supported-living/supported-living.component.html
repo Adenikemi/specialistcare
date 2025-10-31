@@ -3,13 +3,6 @@
     <div class="row about-content">
       <div class="col-md-6">
         <h1>Independence, with the right support by your side.</h1>
-        <div class="row img-container d-none">
-          <div class="col">
-            <div class="card acorn-img">
-              <img src="assets/images/topaz.JPG" alt="Topaz Home Images" />
-            </div>
-          </div>
-        </div>
       </div>
       <div class="col-md-6 d-flex align-items-center">
         <div class="right-content">
@@ -28,7 +21,7 @@
       </div>
     </div>
   </div>
-  <div class="all-services-section" id="serviceSection">
+  <div class="all-services-section bg-light" id="serviceSection">
     <h2 class="text-center">The Homes</h2>
     <p class="pb-2 pt-0 text-center">
       This is the supported living service section at Specialist Care Limited
@@ -66,4 +59,5 @@
       </div>
     </div>
   </div>
+  <app-accreditation [isCQC]="isCQC" [isOfsted]="isOfsted"></app-accreditation>
 </main>

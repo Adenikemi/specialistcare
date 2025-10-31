@@ -37,15 +37,11 @@
   .values-section {
     padding-bottom: 40px;
     isolation: isolate;
-    // background-color: #043927;
 
     h2 {
       padding-top: 60px;
       font-size: 48px;
       color: white;
-      //   background: linear-gradient(118deg, wheat 10%, #043927 90%);
-      //   background-clip: text;
-      //   -webkit-text-fill-color: transparent;
     }
 
     .values-row {
@@ -191,9 +187,7 @@
   .story-section {
     background-color: #043927;
     color: whitesmoke;
-    // background-color: #f9f3df;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-    // box-shadow: 4px 10px rgba(0, 0, 0, 0.1);
 
     h2 {
       font-size: 48px;
@@ -214,8 +208,8 @@
       gap: 12px;
 
       .profile-img {
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
         border-radius: 50%;
         border: 3px solid #d06224;
         display: flex;
@@ -300,9 +294,6 @@
         font-weight: 600;
         line-height: 44px;
         color: white;
-        // background: linear-gradient(118deg, white 20%, #043927 80%);
-        // background-clip: text;
-        // -webkit-text-fill-color: transparent;
         padding-bottom: 10px;
         text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.5),
           0px 0px 2px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.1);

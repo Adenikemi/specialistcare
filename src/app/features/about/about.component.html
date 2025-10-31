@@ -1,71 +1,15 @@
 <main class="about-us-page">
   <section class="hero-section">
-    <h1>Care that empowers, support that lasts.</h1>
-    <p>
+    <h1 class="slide-in">Care that empowers, support that lasts.</h1>
+    <p class="slide-in">
       Specialist Care Ltd supports children, adults, and older individuals with
       complex needs. We believe that with the right environment, compassion, and
       encouragement, every person can thrive. Our mission is simple: to enrich
       lives and empower independence.
     </p>
   </section>
-  <section class="values-section d-none">
-    <h2 class="text-center">Our Value</h2>
-    <p class="text-light text-center pt-3">
-      At Specialist Care Limited, We live by the following;
-    </p>
-    <div class="row values-row">
-      <div class="col">
-        <div class="row g-3">
-          <div class="col-md-4" *ngFor="let item of services">
-            <div class="service-card">
-              <img [src]="item.icon" [alt]="item.heading" />
-              <h5>{{ item.heading }}</h5>
-              <p>
-                {{ item.message }}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="what-we-do-section d-none">
-    <h2 class="text-center">What we do</h2>
-    <p class="text-center">At Specialist Care, these are the things we do</p>
-    <div class="row g-3">
-      <div class="col-md-4">
-        <div class="custom-card w-100">
-          <div class="icon-circle">🏡</div>
-          <h5 class="fw-bold">Children's Residential Care</h5>
-          <p class="text-muted p-design">
-            Safe, nurturing homes for young people with emotional, behavioural,
-            and developmental needs.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="custom-card custom-card2 w-100">
-          <div class="icon-circle icon-circle2">🏠︎</div>
-          <h5 class="fw-bold">Adult's Residential Care</h5>
-          <p class="text-muted p-design">
-            Supporting people with mental health needs, substance misuse
-            histories, and forensic backgrounds.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="custom-card custom-card3 w-100">
-          <div class="icon-circle icon-circle3">🤝</div>
-          <h5 class="fw-bold">Supported Living</h5>
-          <p class="text-muted p-design">
-            Helping adults live independently with the right support.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div class="story-section mt-5">
-    <h2 class="text-center pt-5 pb-4">About Us</h2>
+  <div class="story-section mt-5 slide-in">
+    <h2 class="text-center pt-5 pb-4">Our Story</h2>
     <div class="row">
       <div class="col-md-6">
         <div class="story-img">
@@ -75,47 +19,52 @@
       <div class="col-md-6">
         <p>
           <span>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi at
-            placeat ipsam consectetur dolore minima dolor commodi repellat quos
-            aspernatur possimus ipsa dolorum eius, ex nemo sit. Error, expedita
-            iste.
+            Specialist Care Ltd was founded with a simple but powerful vision:
+            to provide safe, supportive, and person-centred care for adults
+            whose needs were too often overlooked.
           </span>
           <br /><br />
           <span>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-            dolorem tempora iusto, voluptatem pariatur consectetur impedit quas
-            nihil temporibus magni dolor, a recusandae itaque nostrum voluptas
-            non fugit? Maxime, est?
+            In my work, I saw far too many people unable to leave hospital
+            settings because of complex mental health needs, substance misuse
+            histories, or behaviours that made it difficult for them to find a
+            suitable placement. I felt strongly that this had to change — that
+            everyone deserves dignity, respect, and the chance to live in a
+            place they can call home.
           </span>
           <br /><br />
           <span>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, est.
-            Ducimus adipisci veniam dolores quos. Harum perferendis aliquam
-            explicabo facilis nostrum, reiciendis tenetur, dicta, sed molestias
-            architecto quisquam eum repellat.
+            That conviction led to the opening of our first home, Little Acorns
+            residential home in eastbourne, in 2020. We wanted it to feel warm
+            and welcoming, a true home where people could feel safe, valued, and
+            supported. Little Acorns set the standard for everything Specialist
+            Care Ltd stands for today: care that empowers, homes that nurture,
+            and opportunities that inspire independence.
           </span>
           <br /><br />
           <span>
-            At Speciality Care Limited, we stand by our vision every day,
-            embracing our guiding principle:
+            Since then, we have grown steadily, supporting more individuals with
+            complex needs while staying true to our founding values of empathy,
+            respect, equality, care, and independence. As directors, we remain
+            hands-on and committed, ensuring Specialist Care Ltd continues to
+            evolve while never losing sight of why we started: to empower
+            wellness and enrich lives.
           </span>
-          <br /><br />
-          <span class="fw-bold"> “Empowering Wellness, Enriching Lives” </span>
           <br /><br />
         </p>
         <div class="team-card pb-5">
           <div class="profile-img">
-            <img src="https://via.placeholder.com/60" alt="Profile" />
+            <img src="assets\images\about\founder.jpg" alt="Profile" />
           </div>
           <div class="team-text">
-            <h5>Name</h5>
+            <h5>Lazarus Chirimunjiri</h5>
             <p>Founder & Director</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <section class="strategy-section p-5">
+  <section class="strategy-section p-5 slide-in">
     <h2 class="text-center">Our Strategic Direction</h2>
     <p class="mb-4 text-center" style="font-size: 16px">
       Specialist care's strategic direction focuses on delivering personalized,
@@ -142,23 +91,6 @@
               </div>
             </div>
           </div>
-          <!-- <div class="row d-flex">
-            <div class="col-md-6">
-              <div class="image-box">
-                <img src="assets/images/vision.jpg" alt="Vision Statement" />
-                <div class="text-box">Vision Statement</div>
-              </div>
-            </div>
-            <div class="col-md-6 align-content-center">
-              <div class="content">
-                <p class="" style="font-size: 16px">
-                  Our vision is to help people improve their wellbeing and reach
-                  their potential through the provision of high quality,
-                  compassionate and responsive residential care.
-                </p>
-              </div>
-            </div>
-          </div> -->
         </div>
       </div>
     </div>

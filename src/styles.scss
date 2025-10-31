@@ -1,5 +1,3 @@
-// Custom Theming for Angular Material
-// For more information: https://material.angular.dev/guide/theming
 @use "@angular/material" as mat;
 
 html {
@@ -14,41 +12,14 @@ html {
       density: 0,
     )
   );
-} /* You can add global styles to this file, and also import other style files */
-
-html,
-body {
-  height: 100%;
 }
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-
-// #global-loader {
-//   position: fixed;
-//   width: 100%;
+// html,
+// body {
 //   height: 100%;
-//   background: rgba(255, 255, 255, 0.9);
-//   top: 0;
-//   left: 0;
-//   z-index: 9999;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
 // }
-// .spinner {
-//   width: 50px;
-//   height: 50px;
-//   border: 5px solid #ddd;
-//   border-top: 5px solid #3498db;
-//   border-radius: 50%;
-//   animation: spin 1s linear infinite;
-// }
-// @keyframes spin {
-//   to {
-//     transform: rotate(360deg);
-//   }
+// body {
+//   margin: 0;
+//   font-family: Roboto, "Helvetica Neue", sans-serif;
 // }
 
 #global-loader {
@@ -64,26 +35,33 @@ body {
 }
 
 .loader-gif {
-  width: 50px; /* Adjust based on your GIF dimensions */
+  width: 50px;
   height: 50px;
   animation: spin 1s linear infinite;
-  /* Add smooth fade-in/out effects */
-  // animation: fadeIn 0.3s ease-out;
 }
-
-// @keyframes fadeIn {
-//   from {
-//     opacity: 0;
-//     transform: scale(0.8);
-//   }
-//   to {
-//     opacity: 1;
-//     transform: scale(1);
-//   }
-// }
 
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+h1,
+h2 {
+  font-family: cursive;
+}
+
+.slide-in {
+  animation: slideFadeIn 1.2s ease-out forwards;
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
