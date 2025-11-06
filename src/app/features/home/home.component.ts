@@ -1,7 +1,7 @@
 import { isPlatformBrowser, NgClass, NgFor } from '@angular/common';
 import { Component, HostListener, Inject, inject, PLATFORM_ID } from '@angular/core';
-import { Router } from '@angular/router';
 import { AccreditationComponent } from '../../shared/components/accreditation/accreditation.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
