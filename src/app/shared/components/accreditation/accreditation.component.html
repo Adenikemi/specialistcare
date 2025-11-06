@@ -10,16 +10,13 @@
     Our commitment to excellence is demonstrated through rigorous accreditations
     and adherence to the highest standards in social care.
   </p>
-  <div class="row d-flex flex-row">
+  <div class="row d-flex flex-row g-4">
     <div
       class="ofsted-section"
       [ngClass]="isCQC ? 'col-md-6' : 'col'"
       *ngIf="isOfsted"
     >
-      <div
-        class="box-section d-flex flex-column align-items-center"
-        [ngClass]="isCQC ? 'w-100' : 'w-50'"
-      >
+      <div class="box-section d-flex flex-column align-items-center w-100">
         <div class="icon-section">
           <img src="assets/images/ofsted-bg.png" alt="Ofsted Image" />
         </div>

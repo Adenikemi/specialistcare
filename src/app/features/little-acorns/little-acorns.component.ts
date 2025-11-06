@@ -1,8 +1,7 @@
-import { NgClass, NgFor, NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { isPlatformBrowser, NgClass, NgFor } from '@angular/common';
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
 import { AccreditationComponent } from '../../shared/components/accreditation/accreditation.component';
 import { trigger, state, style, animate, transition } from '@angular/animations';
-import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-little-acorns',
@@ -20,6 +19,14 @@ import { NgModel } from '@angular/forms';
 })
 export class LittleAcornsComponent {
   activeIndex = 0;
+  totalGroups = 0;
+  isSmallScreen = false;
+  isBrowser: boolean;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
+  }
+
   count = [
     {
       src: "assets/images/houses/little_acorn_home.jpg",
@@ -48,23 +55,49 @@ export class LittleAcornsComponent {
   ]
   isCQC = false;
   isOfsted = true;
-  email = '';
-  submitted = false;
-
-  handleSubmit() {
-    this.submitted = true;
-    setTimeout(() => (this.submitted = false), 3000);
-  }
 
   get totalSlides() {
     return Math.ceil(this.count.length / 3);
   }
-  
-  prev() {
-    if (this.activeIndex > 0) this.activeIndex--;
+
+  ngOnInit() {
+    if (this.isBrowser) {
+      this.checkScreenSize();
+      this.totalGroups = this.getGroups().length;
+    }
   }
-  
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    if (this.isBrowser) {
+      this.checkScreenSize();
+      this.totalGroups = this.getGroups().length;
+      this.activeIndex = 0;
+    }
+  }
+
+  checkScreenSize() {
+    this.isSmallScreen = window.innerWidth < 576;
+  }
+
+  getGroups() {
+    const groupSize = this.isSmallScreen ? 1 : 3;
+    const groups = [];
+    for (let i = 0; i < this.count.length; i += groupSize) {
+      groups.push(this.count.slice(i, i + groupSize));
+    }
+    return groups;
+  }
+
   next() {
-    if (this.activeIndex < this.totalSlides - 1) this.activeIndex++;
+    if (this.activeIndex < this.totalGroups - 1) {
+      this.activeIndex++;
+    }
+  }
+
+  prev() {
+    if (this.activeIndex > 0) {
+      this.activeIndex--;
+    }
   }
 }

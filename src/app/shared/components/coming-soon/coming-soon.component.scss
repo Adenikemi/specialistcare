@@ -1,7 +1,8 @@
 .join-section {
-  background-color: #043927;
+  position: relative;
   height: 70vh;
   align-content: center;
+  z-index: -1;
 
   .not-recruiting {
     height: fit-content;

@@ -1,5 +1,5 @@
-import { NgClass, NgFor, NgIf } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { isPlatformBrowser, NgClass, NgFor } from '@angular/common';
+import { Component, HostListener, Inject, inject, PLATFORM_ID } from '@angular/core';
 import { Router } from '@angular/router';
 import { AccreditationComponent } from '../../shared/components/accreditation/accreditation.component';
 
@@ -11,7 +11,6 @@ import { AccreditationComponent } from '../../shared/components/accreditation/ac
 })
 export class HomeComponent {
   private router = inject(Router);
-  activeIndex = 0;
   count = [
     {
       src: "assets/images/houses/little_acorn_home.jpg",
@@ -85,12 +84,54 @@ export class HomeComponent {
   get totalSlides() {
     return Math.ceil(this.count.length / 3);
   }
-  
-  prev() {
-    if (this.activeIndex > 0) this.activeIndex--;
+
+  activeIndex = 0;
+  totalGroups = 0;
+  isSmallScreen = false;
+  isBrowser: boolean;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
   }
-  
+
+  ngOnInit() {
+    if (this.isBrowser) {
+      this.checkScreenSize();
+      this.totalGroups = this.getGroups().length;
+    }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    if (this.isBrowser) {
+      this.checkScreenSize();
+      this.totalGroups = this.getGroups().length;
+      this.activeIndex = 0;
+    }
+  }
+
+  checkScreenSize() {
+    this.isSmallScreen = window.innerWidth < 576;
+  }
+
+  getGroups() {
+    const groupSize = this.isSmallScreen ? 1 : 3;
+    const groups = [];
+    for (let i = 0; i < this.count.length; i += groupSize) {
+      groups.push(this.count.slice(i, i + groupSize));
+    }
+    return groups;
+  }
+
   next() {
-    if (this.activeIndex < this.totalSlides - 1) this.activeIndex++;
+    if (this.activeIndex < this.totalGroups - 1) {
+      this.activeIndex++;
+    }
+  }
+
+  prev() {
+    if (this.activeIndex > 0) {
+      this.activeIndex--;
+    }
   }
 }

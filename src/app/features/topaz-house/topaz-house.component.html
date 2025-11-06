@@ -1,7 +1,7 @@
 <main class="little-acorn-page">
   <section class="about-section">
     <div class="text-center slide-in">
-      <h1>Children's Residential > Topaz House</h1>
+      <h1>Topaz House</h1>
       <p class="pb-0">
         A cheerful 4-bedroom home designed for children who need a safe,
         nurturing place to call their own. With spacious bedrooms, cosy communal
@@ -11,45 +11,43 @@
     </div>
   </section>
   <section class="homes-section slide-in">
-    <h2 class="text-center pb-3">Topaz House</h2>
-    <div id="carouselExample" class="carousel slide">
+    <h2 class="text-center pb-3">The home</h2>
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div
           class="carousel-item"
-          *ngFor="let group of [].constructor(totalSlides); let i = index"
-          [ngClass]="{ active: i === 0 }"
+          *ngFor="let group of getGroups(); let i = index"
+          [ngClass]="{ active: i === activeIndex }"
         >
           <div class="row">
-            <div
-              class="col-md-4"
-              *ngFor="let image of count.slice(i * 3, i * 3 + 3)"
-            >
-              <div class="image-box">
-                <img [src]="image.src" alt="Vision Statement" />
-                <!-- <div class="text-box">{{ image.name }}</div> -->
+            <div class="col-12 col-md-4" *ngFor="let image of group">
+              <div class="image-box text-center">
+                <img
+                  [src]="image.src"
+                  alt="Vision Statement"
+                  class="img-fluid"
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <button
         class="carousel-control-prev"
         type="button"
-        data-bs-target="#carouselExample"
-        data-bs-slide="prev"
         (click)="prev()"
         [disabled]="activeIndex === 0"
       >
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
+
       <button
         class="carousel-control-next"
         type="button"
-        data-bs-target="#carouselExample"
-        data-bs-slide="next"
         (click)="next()"
-        [disabled]="activeIndex === totalSlides - 1"
+        [disabled]="activeIndex === totalGroups - 1"
       >
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>

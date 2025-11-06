@@ -1,16 +1,28 @@
 .news-section {
   background-color: #043927;
   padding: 0 40px 60px;
+  position: relative;
+  z-index: -1;
   .main-page {
     .heading {
       padding: 100px 40px 60px;
-      display: flex;
-      justify-content: space-between;
+
+      @media (width <= 768px) {
+        padding: 20px 0 0;
+      }
 
       h1 {
         font-size: 91px;
         align-content: end;
         color: white;
+
+        @media (width <= 768px) {
+          font-size: 60px;
+        }
+
+        @media (width <= 425px) {
+          font-size: 48px;
+        }
       }
 
       p {
@@ -23,6 +35,10 @@
       padding: 40px;
       border-radius: 16px;
       background-color: white;
+
+      @media (width <= 768px) {
+        padding: 20px;
+      }
 
       h2 {
         margin-top: 20px;

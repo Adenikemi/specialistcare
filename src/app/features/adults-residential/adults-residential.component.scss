@@ -1,7 +1,10 @@
 .adult-residential-section {
+  z-index: -1;
   .about-section {
     padding: 80px 40px;
     color: white;
+    position: relative;
+    z-index: -1;
 
     p {
       font-size: 16px;
