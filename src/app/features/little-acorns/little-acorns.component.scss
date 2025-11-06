@@ -2,6 +2,8 @@
   .about-section {
     padding: 80px 40px;
     color: white;
+    position: relative;
+    z-index: -1;
 
     p {
       font-size: 16px;
@@ -84,7 +86,6 @@
       border-radius: 8px;
       backdrop-filter: blur(22px);
       background: rgba(255, 255, 255, 0.06);
-      // border: 2px solid white;
       padding: 60px 20px;
 
       h2 {
@@ -93,8 +94,6 @@
         line-height: 44px;
         color: white;
         padding-bottom: 10px;
-        // text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.5),
-        //   0px 0px 2px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.1);
         background: linear-gradient(118deg, wheat 20%, brown 80%);
         background-clip: text;
         -webkit-text-fill-color: transparent;

@@ -1,11 +1,13 @@
 <footer class="footer text-light py-5">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col col-md-3">
+      <div class="col-12 col-md-4 col-lg-3 order-3 order-md-0">
         <img src="assets\logo\logo_1.svg" alt="Specialist care logo" />
       </div>
 
-      <div class="col col-md-3 footer-section mb-5 mb-md-0">
+      <div
+        class="col-12 col-md-4 col-lg-3 order-0 order-md-1 footer-section mb-5 mb-md-0"
+      >
         <h6 class="fw-bold mb-3">Quick Links</h6>
         <ul class="list-unstyled">
           <li><a href="#" class="footer-link">News</a></li>
@@ -69,7 +71,7 @@
         </ul>
       </div>
 
-      <div class="col col-md-3 footer-section">
+      <div class="col-12 col-md-4 col-lg-3 order-1 order-md-2 footer-section">
         <h6 class="fw-bold mb-3">Services</h6>
         <ul class="list-unstyled">
           <li><a href="#" class="footer-link">Supported Living</a></li>
@@ -80,15 +82,18 @@
         </ul>
       </div>
 
-      <div class="col col-md-3 footer-section mb-3">
+      <div
+        class="col-12 col-md-4 col-lg-3 order-2 order-md-3 footer-section mb-3"
+      >
         <h6 class="fw-bold mb-3">Contact Us</h6>
         <address class="mb-0">
           Unit 1c Millenium House, <br />
           Gapton Hall Road, Great <br />
           Yarmouth, Norfolk, England, NR31 ONL <br />
-          <br />
-          Phone: 01493 804030 <br />
-          Email: {{ email }} <br />
+          <div class="contact pt-0 pt-lg-4">
+            <b>Phone:</b> 01493 804030 <br />
+            <b>Email:</b> {{ email }} <br />
+          </div>
         </address>
       </div>
     </div>
