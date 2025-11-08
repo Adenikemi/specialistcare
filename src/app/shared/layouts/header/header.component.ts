@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
+declare const bootstrap: any;
 
 @Component({
   selector: 'app-header',
@@ -10,8 +11,26 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
   router = inject(Router);
 
-  navigate(event: Event, url: string) {
-    event.preventDefault();
-    this.router.navigateByUrl(url);
+  openedDropdowns = new Set<string>();
+
+  navigate(event: Event, route: string) {
+    const dropdownToggle = event.currentTarget as HTMLElement;
+    const dropdownMenu = dropdownToggle.nextElementSibling;
+
+    if (dropdownMenu && dropdownMenu.classList.contains('dropdown-menu')) {
+      const isOpen = dropdownMenu.classList.contains('show');
+
+      if (!this.openedDropdowns.has(route)) {
+        event.preventDefault();
+        const bsDropdown = new bootstrap.Dropdown(dropdownToggle);
+        bsDropdown.show();
+        this.openedDropdowns.add(route);
+        return;
+      }
+    }
+    window.location.href = route;
   }
+
+
+
 }

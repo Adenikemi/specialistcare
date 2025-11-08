@@ -53,8 +53,8 @@ export class LittleAcornsComponent {
       name: "Little Acorns"
     },
   ]
-  isCQC = false;
-  isOfsted = true;
+  isCQC = true;
+  isOfsted = false;
 
   get totalSlides() {
     return Math.ceil(this.count.length / 3);
