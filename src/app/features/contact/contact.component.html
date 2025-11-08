@@ -54,11 +54,11 @@
                   <p class="text-center text-muted">
                     If you'd like to start a conversation about Specialist Care,
                     or to arrange a visit to one of our support services, please
-                    complete the form below and we'll be in touch to arrange the
-                    next steps.
+                    complete t he form below and we'll be in touch to arrange
+                    the next steps.
                   </p>
 
-                  <form (ngSubmit)="sendEmail('Enquiry')">
+                  <form id="contactForm" (ngSubmit)="sendEmail('Enquiry')">
                     <div class="row mb-3">
                       <div class="col">
                         <label class="form-label required">First Name</label>
@@ -136,7 +136,7 @@
                     next steps.
                   </p>
 
-                  <form (ngSubmit)="sendEmail('Referral')">
+                  <form id="contactForm" (ngSubmit)="sendEmail('Referral')">
                     <div class="mb-3">
                       <label class="form-label required"
                         >Relation to Contact</label
@@ -156,8 +156,8 @@
                         >
                         <input
                           type="text"
-                          [(ngModel)]="firstName"
-                          name="firstName"
+                          [(ngModel)]="referralFirstName"
+                          name="referralFirstName"
                           class="form-control"
                           placeholder="Referral's first name"
                         />
@@ -169,8 +169,8 @@
                         <input
                           type="text"
                           class="form-control"
-                          name="lastName"
-                          [(ngModel)]="lastName"
+                          name="referralLastName"
+                          [(ngModel)]="referralLastName"
                           placeholder="Referral's last name"
                         />
                       </div>
@@ -183,8 +183,8 @@
                       <input
                         type="email"
                         class="form-control"
-                        name="email"
-                        [(ngModel)]="email"
+                        name="referralEmail"
+                        [(ngModel)]="referralEmail"
                         placeholder="your.email@example.com"
                       />
                     </div>
@@ -194,8 +194,8 @@
                       <input
                         type="tel"
                         class="form-control"
-                        name="phoneNumber"
-                        [(ngModel)]="phoneNumber"
+                        name="referralPhoneNumber"
+                        [(ngModel)]="referralPhoneNumber"
                         placeholder="(123) 456-7890"
                       />
                     </div>
@@ -294,7 +294,7 @@
                     your feedback in the form below.
                   </p>
 
-                  <form (ngSubmit)="sendEmail('Feedback')">
+                  <form id="contactForm" (ngSubmit)="sendEmail('Feedback')">
                     <div class="row mb-3">
                       <div class="col">
                         <label class="form-label required">First Name</label>
@@ -369,7 +369,7 @@
   <section class="map-section py-5">
     <div class="container">
       <div class="row g-4 align-items-center">
-        <div class="col-lg-6">
+        <div class="col-lg-6 order-1 order-lg-0">
           <div class="map-wrapper shadow-sm rounded overflow-hidden">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d4830.553494299955!2d1.7020092590255755!3d52.593804453927454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sUnit%201c%20Millenium%20House%2C%20Gapton%20Hall%20Road%2C%20Great%20Yarmouth%2C%20Norfolk%2C%20England%2C%20NR31%20ONL!5e0!3m2!1sen!2sng!4v1757068552670!5m2!1sen!2sng"
@@ -383,7 +383,7 @@
           </div>
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-lg-6 order-0 order-lg-1">
           <div class="contact-card p-4 shadow-sm rounded bg-white">
             <h4 class="fw-bold mb-3">Contact Information</h4>
             <p class="text-muted mb-4">

@@ -27,6 +27,7 @@ export class ContactComponent {
   reason: string = '';
   relation: string = '';
   templateParams: any;
+  requestType: string = '';
 
   constructor() {
     emailjs.init('Iv27N9uZkRfx6zEoW');
@@ -40,8 +41,16 @@ export class ContactComponent {
         lastName: this.lastName,
         email: this.email,
         phoneNumber: this.phoneNumber,
-        reason: this.reason
+        reason: this.reason,
+        requestType: data === 'Enquiry' ? 'Enquiry' : 'Feedback'
       };
+      emailjs.send('service_mmp9kmv', 'template_ga1o4y4', this.templateParams)
+      .then(() => {
+        this.submit("SUCCESS");
+      }, (error) => {
+        console.error('FAILED...', error);
+        this.submit("ERROR");
+      });
     } else if (data === "Referral") {
       this.templateParams = {
         referralFirstName: this.referralFirstName,
@@ -54,18 +63,18 @@ export class ContactComponent {
         phoneNumber: this.phoneNumber,
         enquiry: this.enquiry,
         reason: this.reason,
-        relation: this.relation
+        relation: this.relation,
+        requestType: 'Referral'
       };
-    }
-    
 
-    emailjs.send('service_mmp9kmv', 'template_ga1o4y4', this.templateParams)
+      emailjs.send('service_mmp9kmv', 'template_eid0qzg', this.templateParams)
       .then(() => {
         this.submit("SUCCESS");
       }, (error) => {
         console.error('FAILED...', error);
         this.submit("ERROR");
       });
+    }
   }
 
 
@@ -84,5 +93,7 @@ export class ContactComponent {
         buttons: { continue: "Try Again" }
       })
     }
+    const form = document.getElementById('contactForm') as HTMLFormElement;
+        form.reset();
   }
 }

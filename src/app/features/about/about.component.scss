@@ -46,6 +46,10 @@
         @media (width < 768px) {
           font-size: 40px;
         }
+
+        @media (width < 425px) {
+          font-size: 32px;
+        }
       }
 
       p {
