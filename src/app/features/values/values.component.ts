@@ -13,13 +13,13 @@ export class ValuesComponent {
       icon: 'assets/logo/empathy.png',
       heading: 'Empathy',
       message:
-        'Here at speciality care, we listen, understand, and walk alongside each person on dtheir journey.',
+        'Here at specialist care, we listen, understand, and walk alongside each person on dtheir journey.',
     },
     {
       icon: 'assets/logo/respect.png',
       heading: 'Respect',
       message:
-        'Here at speciality care, we ensure to respect our residents by valuing individuality, culture, and choice.',
+        'Here at specialist care, we ensure to respect our residents by valuing individuality, culture, and choice.',
     },
     {
       icon: 'assets/logo/equality.png',

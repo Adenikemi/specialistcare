@@ -53,19 +53,19 @@ export class HomeComponent {
       icon: 'assets/logo/empathy.png',
       heading: 'Empathy',
       message:
-        'Here at speciality care, we show compassion and empathy to our residents to ensure they feel safe and comfortable in our care',
+        'Here at specialist care, we show compassion and empathy to our residents to ensure they feel safe and comfortable in our care',
     },
     {
       icon: 'assets/logo/respect.png',
       heading: 'Respect',
       message:
-        'Here at speciality care, we ensure to respect our residents by understanding their personal space and boundaries.',
+        'Here at specialist care, we ensure to respect our residents by understanding their personal space and boundaries.',
     },
     {
       icon: 'assets/logo/equality.png',
       heading: 'Equality',
       message:
-        'All our residents can express their wishes and preferences which allows them to have a positive experience at speciality care.',
+        'All our residents can express their wishes and preferences which allows them to have a positive experience at specialist care.',
     },
     {
       icon: 'assets/logo/care.png',
