@@ -44,12 +44,10 @@ export class ValuesComponent {
   getColClass(index: number): string {
     const total = this.services.length;
   
-    // If total is 5 and item is in the last row (index 3 & 4)
     if (total === 5 && index >= 3) {
       return 'col-md-6';
     }
   
-    // Default: 3 items per row
     return 'col-md-4';
   }
   
