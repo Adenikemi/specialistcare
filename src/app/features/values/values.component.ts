@@ -1,9 +1,9 @@
-import { NgFor } from '@angular/common';
+import { NgClass, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-values',
-  imports: [NgFor],
+  imports: [NgFor, NgClass],
   templateUrl: './values.component.html',
   styleUrl: './values.component.scss'
 })
@@ -40,4 +40,17 @@ export class ValuesComponent {
         'We empower people to grow in confidence and live life on their own terms.',
     },
   ];
+
+  getColClass(index: number): string {
+    const total = this.services.length;
+  
+    // If total is 5 and item is in the last row (index 3 & 4)
+    if (total === 5 && index >= 3) {
+      return 'col-md-6';
+    }
+  
+    // Default: 3 items per row
+    return 'col-md-4';
+  }
+  
 }

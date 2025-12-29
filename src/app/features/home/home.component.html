@@ -83,7 +83,7 @@
   <section class="values-section slide-in p-4 p-md-5">
     <h2 class="text-center pb-2">Our Values</h2>
     <div class="row values-row">
-      <div class="col">
+      <!-- <div class="col">
         <div class="row g-3">
           <div class="col-sm-6 col-md-4" *ngFor="let item of services">
             <div class="service-card">
@@ -92,6 +92,21 @@
               <p>
                 {{ item.message }}
               </p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="col">
+        <div class="row g-3">
+          <div
+            *ngFor="let item of services; let i = index"
+            [ngClass]="getColClass(i)"
+          >
+            <div class="service-card">
+              <img [src]="item.icon" [alt]="item.heading" />
+              <h5>{{ item.heading }}</h5>
+              <p>{{ item.message }}</p>
             </div>
           </div>
         </div>
