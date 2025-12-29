@@ -39,15 +39,17 @@
           />
         </div>
       </div>
+
       <div class="col-md-6">
         <div class="row g-3">
-          <div class="col-md-6" *ngFor="let item of services">
+          <div
+            *ngFor="let item of services; let i = index"
+            [ngClass]="getColClass(i)"
+          >
             <div class="service-card">
               <img [src]="item.icon" [alt]="item.heading" />
               <h5>{{ item.heading }}</h5>
-              <p>
-                {{ item.message }}
-              </p>
+              <p>{{ item.message }}</p>
             </div>
           </div>
         </div>

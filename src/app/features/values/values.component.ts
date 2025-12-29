@@ -1,9 +1,9 @@
-import { NgFor } from '@angular/common';
+import { NgClass, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-values',
-  imports: [NgFor],
+  imports: [NgFor, NgClass],
   templateUrl: './values.component.html',
   styleUrl: './values.component.scss'
 })
@@ -13,13 +13,13 @@ export class ValuesComponent {
       icon: 'assets/logo/empathy.png',
       heading: 'Empathy',
       message:
-        'Here at speciality care, we listen, understand, and walk alongside each person on dtheir journey.',
+        'Here at specialist care, we listen, understand, and walk alongside each person on dtheir journey.',
     },
     {
       icon: 'assets/logo/respect.png',
       heading: 'Respect',
       message:
-        'Here at speciality care, we ensure to respect our residents by valuing individuality, culture, and choice.',
+        'Here at specialist care, we ensure to respect our residents by valuing individuality, culture, and choice.',
     },
     {
       icon: 'assets/logo/equality.png',
@@ -40,4 +40,15 @@ export class ValuesComponent {
         'We empower people to grow in confidence and live life on their own terms.',
     },
   ];
+
+  getColClass(index: number): string {
+    const total = this.services.length;
+  
+    if (total === 5 && index >= 3) {
+      return 'col-md-6';
+    }
+  
+    return 'col-md-4';
+  }
+  
 }

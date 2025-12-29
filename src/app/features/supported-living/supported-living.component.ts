@@ -8,6 +8,6 @@ import { AccreditationComponent } from '../../shared/components/accreditation/ac
   styleUrl: './supported-living.component.scss'
 })
 export class SupportedLivingComponent {
-  isCQC = false;
-  isOfsted = true;
+  isCQC = true;
+  isOfsted = false;
 }
