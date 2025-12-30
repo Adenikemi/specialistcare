@@ -1,0 +1,79 @@
+<main class="values-page">
+  <section class="hero-section-container">
+    <div class="hero-section">
+      <div class="row">
+        <div class="hero-text">
+          <h1 class="slide-in">Specialist Care</h1>
+          <p class="slide-in">
+            We are proud to deliver specialist residential care supporting
+            people with various needs to help them lead the highest quality of
+            life. We are focused on providing person-centred support, which we
+            achieve by asking about and understanding people’s wants, needs,
+            dreams and aspirations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="values-section p-5 slide-in">
+    <div class="row">
+      <div
+        class="col-md-6 d-flex flex-column justify-content-center overflow-hidden"
+      >
+        <ul>
+          <li class="text-dark"><h3>OUR CORE VALUES</h3></li>
+        </ul>
+        <h2>Transformative Specialist Care</h2>
+        <p class="py-3 d-none">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
+          repellendus ratione distinctio esse enim ad optio accusamus, odio
+          impedit, quo earum eligendi aliquid dolorum? Magnam, doloremque
+          suscipit! Quia, laborum soluta?
+        </p>
+        <div class="img-container pt-3 mt-3 d-none d-md-block">
+          <img
+            src="assets/images/values/value.jpg"
+            alt="Child in awe"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="row g-3">
+          <div
+            *ngFor="let item of services; let i = index"
+            [ngClass]="getColClass(i)"
+          >
+            <div class="service-card">
+              <img [src]="item.icon" [alt]="item.heading" />
+              <h5>{{ item.heading }}</h5>
+              <p>{{ item.message }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-section">
+    <div class="main-container">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="d-flex flex-column align-items-center">
+              <div class="text-center">
+                <h2>Contact Us</h2>
+                <p>Stay in touch, keep with our latest trend and update!</p>
+                <button>
+                  <a href="/contact" class="text-decoration-none">Contact Us</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

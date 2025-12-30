@@ -1,0 +1,19 @@
+.join-section {
+  position: relative;
+  height: 70vh;
+  align-content: center;
+  z-index: -1;
+
+  .not-recruiting {
+    height: fit-content;
+    width: fit-content;
+    padding: 20px;
+    box-shadow: 0 4px 16px hsla(29, 75%, 8%, 0.2);
+    background: #fff;
+    border-radius: 1.5rem;
+
+    @media (width >= 768px) {
+      padding: 40px;
+    }
+  }
+}

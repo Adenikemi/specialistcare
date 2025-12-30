@@ -1,0 +1,149 @@
+<main class="home-page">
+  <div class="hero-section-container">
+    <div class="hero-section">
+      <div class="row">
+        <div class="hero-text">
+          <h1 class="slide-in">Empowering wellness, enriching lives...</h1>
+          <p class="slide-in">
+            At Specialist Care Ltd, we provide more than care — we create safe,
+            supportive, and nurturing homes where people can flourish. Our
+            values of empathy, respect, equality, care, and independence shape
+            everything we do. Whether supporting children, young people, or
+            adults, we focus on dignity, empowerment, and brighter futures.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="welcome-section bg-light pt-2 pt-md-5 slide-in">
+    <div class="row">
+      <div class="col-md-6 d-flex align-items-center order-md-2">
+        <div class="right-section d-flex flex-column">
+          <h2 class="text-center pb-3 pb-md-4 m-0 pt-3 pt-md-0">
+            Welcome to Specialist Care
+          </h2>
+          <p class="mb-2 mb-md-0 text-center text-md-start">
+            At Specialist Care Ltd, we provide more than care - we create safe,
+            supportive, and nurturing homes where people can flourish. Our
+            values of
+            <b>empathy, respect, equality, care, and independence</b> shape
+            everything we do. Whether supporting children, young people, or
+            adults, we focus on dignity, empowerment, and brighter futures.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 p-0 order-md-1">
+        <div class="left-section">
+          <img
+            src="assets\images\home\about1.jpg"
+            alt="children playing in the field"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="strategy-section p-4 p-md-5 slide-in">
+    <h2 class="text-center">Our Strategic Direction</h2>
+    <p class="mb-4 text-center" style="font-size: 16px">
+      Specialist care's strategic direction focuses on delivering personalized,
+      high-quality support tailored to the unique needs of individuals with
+      complex health or social care requirements.
+    </p>
+    <div class="container">
+      <div class="row">
+        <div class="care-container">
+          <div class="row d-flex">
+            <div class="col-md-6">
+              <div class="image-box">
+                <img
+                  src="assets/images/home/love.jpg"
+                  alt="Mission Statement"
+                />
+                <div class="text-box">Mission Statement</div>
+              </div>
+            </div>
+            <div class="col-md-6 align-content-center">
+              <div class="content">
+                <p class="" style="font-size: 16px">
+                  Our mission is to help people improve their wellbeing and
+                  reach their potential through the provision of high quality,
+                  compassionate and responsive residential care.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="values-section slide-in p-4 p-md-5">
+    <h2 class="text-center pb-2">Our Values</h2>
+    <div class="row values-row">
+      <div class="col">
+        <div class="row g-3">
+          <div
+            *ngFor="let item of services; let i = index"
+            [ngClass]="getColClass(i)"
+          >
+            <div class="service-card">
+              <img [src]="item.icon" [alt]="item.heading" />
+              <h5>{{ item.heading }}</h5>
+              <p>{{ item.message }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-home-section p-5">
+    <h2 class="text-center pb-3">Our Featured Homes</h2>
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div
+          class="carousel-item"
+          *ngFor="let group of getGroups(); let i = index"
+          [ngClass]="{ active: i === activeIndex }"
+        >
+          <div class="row">
+            <div class="col-12 col-md-4" *ngFor="let image of group">
+              <div class="image-box text-center">
+                <img
+                  [src]="image.src"
+                  alt="Vision Statement"
+                  class="img-fluid"
+                />
+                <div class="text-box">{{ image.name }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        (click)="prev()"
+        [disabled]="activeIndex === 0"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button
+        class="carousel-control-next"
+        type="button"
+        (click)="next()"
+        [disabled]="activeIndex === totalGroups - 1"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <app-accreditation [isOfsted]="isOfsted" [isCQC]="isCQC"></app-accreditation>
+</main>

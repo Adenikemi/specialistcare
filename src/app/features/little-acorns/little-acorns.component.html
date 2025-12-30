@@ -1,0 +1,56 @@
+<main class="little-acorn-page">
+  <section class="about-section">
+    <div class="text-center">
+      <h1 class="slide-in">Little Acorns</h1>
+      <p class="pb-0 slide-in">
+        A welcoming 15-bed coastal home with en-suite bedrooms, communal spaces,
+        and a secure garden.
+      </p>
+    </div>
+  </section>
+  <section class="homes-section slide-in">
+    <h2 class="text-center pb-3">The home</h2>
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div
+          class="carousel-item"
+          *ngFor="let group of getGroups(); let i = index"
+          [ngClass]="{ active: i === activeIndex }"
+        >
+          <div class="row">
+            <div class="col-12 col-md-4" *ngFor="let image of group">
+              <div class="image-box text-center">
+                <img
+                  [src]="image.src"
+                  alt="Vision Statement"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        (click)="prev()"
+        [disabled]="activeIndex === 0"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button
+        class="carousel-control-next"
+        type="button"
+        (click)="next()"
+        [disabled]="activeIndex === totalGroups - 1"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+  <app-accreditation [isCQC]="isCQC" [isOfsted]="isOfsted"></app-accreditation>
+</main>

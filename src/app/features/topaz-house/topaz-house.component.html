@@ -1,0 +1,78 @@
+<main class="little-acorn-page">
+  <section class="about-section">
+    <div class="text-center slide-in">
+      <h1>Topaz House</h1>
+      <p class="pb-0">
+        A cheerful 4-bedroom home designed for children who need a safe,
+        nurturing place to call their own. With spacious bedrooms, cosy communal
+        areas, and a secure garden, Topaz House is a place where childhood is
+        celebrated, friendships are built, and young people can thrive.
+      </p>
+    </div>
+  </section>
+  <section class="homes-section slide-in">
+    <h2 class="text-center pb-3">The home</h2>
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div
+          class="carousel-item"
+          *ngFor="let group of getGroups(); let i = index"
+          [ngClass]="{ active: i === activeIndex }"
+        >
+          <div class="row">
+            <div class="col-12 col-md-4" *ngFor="let image of group">
+              <div class="image-box text-center">
+                <img
+                  [src]="image.src"
+                  alt="Vision Statement"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        (click)="prev()"
+        [disabled]="activeIndex === 0"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button
+        class="carousel-control-next"
+        type="button"
+        (click)="next()"
+        [disabled]="activeIndex === totalGroups - 1"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+  <app-accreditation [isCQC]="isCQC" [isOfsted]="isOfsted"></app-accreditation>
+
+  <section class="contact-section">
+    <div class="main-container">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="d-flex flex-column align-items-center">
+              <div class="text-center">
+                <h2>Contact Us</h2>
+                <p>Stay in touch, keep with our latest trend and update!</p>
+                <button>
+                  <a href="/contact" class="text-decoration-none">Contact Us</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
