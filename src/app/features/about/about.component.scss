@@ -199,9 +199,11 @@
         border: none;
         padding: 10px;
         border-radius: 6px;
-        color: #043927;
-        font-size: 18px;
-        font-weight: 500;
+        a {
+          color: #043927;
+          font-size: 18px;
+          font-weight: 500;
+        }
       }
     }
   }
