@@ -28,7 +28,8 @@ export class HeaderComponent {
         return;
       }
     }
-    window.location.href = route;
+    this.router.navigate([route]);
+    // window.location.href = route;
   }
 
 
